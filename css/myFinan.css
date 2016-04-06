@@ -1,0 +1,207 @@
+/*Author: Andres Botello*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+.btn-a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.btn-a span {
+	margin-right: 11px;
+	margin-left: 11px;
+	-webkit-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	font-family: Montserrat, sans-serif;
+	color: #4a4a4a;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.btn-a.v2 span {
+	margin-left: 41px;
+}
+.btn-a div {
+	padding-top: 16.5px;
+	padding-bottom: 16.5px;
+	-webkit-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	background-image: linear-gradient(#FFFFFF, #FFFFFF);
+}
+.btn-a:hover span {
+	color: white;
+}
+.btn-a:hover div {
+	background-image: -webkit-linear-gradient(bottom, #006699, #2B8DCF);
+	background-image: -o-linear-gradient(bottom, #006699, #2B8DCF);
+	background-image: linear-gradient(to top, #006699, #2B8DCF);;
+}
+.mask {
+    position: absolute;
+    z-index: 9000;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.DN {
+	display: none;
+}
+.titulo {
+	background-image: -webkit-linear-gradient(bottom, #006699, #2B8DCF);
+	background-image: -o-linear-gradient(bottom, #006699, #2B8DCF);
+	background-image: linear-gradient(to top, #006699, #2B8DCF);
+    font-family: Arial;
+    font-weight: bold;
+    font-size: small;
+    color: White;
+    text-align: center;
+    height: 31px;
+}
+.menu-img {
+	background: transparent url("../images/menu-finder20x20.png") no-repeat left 30%;
+	padding-left: 20px;
+}
+.config-menu {
+	position: fixed;
+	top: 0%;
+	left: -100%;
+	height: 100%;
+	background-color: white;
+	-webkit-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	z-index: 9010;
+}
+.config-menu h2 {
+	padding-left: 40px;
+	padding-right: 80px;
+}
+.config-menu.out {
+	left: 0%;
+}
+.section {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.section.sec-gray {
+	margin-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #F5F6F7;
+}
+.section.header {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+.container.min-width {
+	min-width: 95%;
+}
+.container.max-width {
+	min-width: 100%;
+}
+.fila {
+	display: table;
+}
+.fila-tipo2 {
+	display: -webkit-inline-flex;
+	display: inline-flex;	
+}
+.col {
+	position: relative;
+	float: left;
+}
+.col2 {
+	position: relative;
+	float: left;
+}
+.col.col-1 {
+	width: 120px;
+}
+.col-right {
+	position: relative;
+	float: right;
+}
+.col-3 {
+	width: 33%;
+}
+.col-4 {
+	width: 25%;
+}
+.box-shadow {
+	box-shadow: black 1px 1px 3px 0px;
+}
+.mo table {
+	border: none;
+	border-collapse:collapse;
+}
+.mo td {
+	border:1px dotted #E8E8E8;
+	border-right: none;
+	border-collapse:collapse;
+	font-family: sans-serif;
+	font-size: 13px;
+}
+.mo input {
+	border: 0px;
+	margin: 0px;
+	padding: 1px 1px;
+	width: 92.7%;
+	background: transparent;
+}
+.mo select {
+	border: 0px;
+	margin: 0px;
+
+	background: transparent;
+}
+.mo label {
+	padding: 1px 1px;
+}
+.mo th {
+	padding: 1px 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-image: -webkit-linear-gradient(bottom, #006699, #2B8DCF);
+	background-image: -o-linear-gradient(bottom, #006699, #2B8DCF);
+	background-image: linear-gradient(to top, #006699, #2B8DCF);
+	font-family: sans-serif;
+	color: white;
+	font-size: 13px;
+	text-align: left;
+	text-decoration: none;
+	text-shadow: rgba(0, 0, 0, 0.13) 0px 2px 0px;
+	border: 0px dotted #E8E8E8;
+	border-collapse: collapse;
+}
+.mo th:hover {
+  background-image: -webkit-linear-gradient(bottom, #2B8DCF, #40AAD5);
+  background-image: -o-linear-gradient(bottom, #2B8DCF, #40AAD5);
+  background-image: linear-gradient(to top, #2B8DCF, #40AAD5);
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.mo tr:hover {
+	background: #DEEFF5;
+	color: black;
+}
+.mo tr.seleccionada:hover {
+	background: #1E90FF;
+	color: white;
+}
+.mo tbody {
+	display: block;
+}
+.mo.scroll tbody {
+	max-height: 340px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.seleccionada {
+	background: #1E90FF;
+	color: white;
+}

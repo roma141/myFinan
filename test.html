@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>test</title>
+<meta name="description" content="">
+<meta name="author" content="PAPI">
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+var n=3;
+
+$(document).ready(function() {
+	var cad = "", i;
+	for (i=0; i<n; i++) {
+		cad +='<div id=p' + i + '></div><br>';
+	} 
+	$("#cuerpo").html(cad);
+});
+
+function iniciar()
+{
+	var i;
+	for (i=0; i<n; i++) {
+		test(i);
+	} 
+	
+}
+
+function test(i)
+{
+	$.ajax({
+		url: "http://www.gtienda.com:8084/stream",
+		jsonp: "callback",
+		dataType: "jsonp",
+		success: function( response ) {
+			dibuja(i, response);
+		}
+	});			
+}
+
+function dibuja(i, datos)
+{
+	$("#p"+ i).html(datos);
+}
+
+</script>		
+		
+		
+</head>
+<body>
+	<div id="cuerpo">
+	</div>
+	<button id="inicio" onclick="iniciar();">Inicio</button>
+</body>
+</html>

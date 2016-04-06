@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>MyFinan - Movimientos</title>
+	<meta name="description" content="Finanzas personales" />
+	<meta name="author" content="Botpi" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/myFinan.css">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="js/jmov.js"></script>
+	<script type="text/javascript" src="js/japiFinan.js"></script>
+	<script type="text/javascript" src="js/jcomun.js"></script>
+	<script type="text/javascript" src="js/jtabla.js"></script>
+	<script type="text/javascript" src="js/jgoogle.js"></script>
+		
+	<script>
+		$(document).ready(function() {
+			pagina = "fnmov";
+			titulo = "MyFinan - Movimientos";
+			ayuda = "http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=GTienda:Acerca_de";
+			inicioMov();
+		});
+	</script>
+</head>
+<body>
+<div id="mask" class="DN" onclick="cancelar();"> </div>
+<div id="mask2" class="DN mask" onclick="menuPop(0);"> </div>
+	
+<div class="section">
+	<div class="container">
+		<div class="fila">
+			<div class="col" style="width:20px;padding-top: 15px;padding-bottom: 15px;">
+				<span class="menu-img" onclick="menuPop(1);"></span>
+			</div>
+	    	<div class="col" style="width:300px;">
+	    		<img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
+	    	</div>
+	        <div class="col" style="width:80px;font-family: Arial, Helvetica, sans-serif;padding-top: 15px;padding-bottom: 15px;">
+	        	<input type="text" id="fecha" style="width: 80px;border-style: none" onchange="refrescar();"/>
+	        </div>
+			<div class="col" style="width:200px;padding-top: 15px;padding-bottom: 15px;">
+				<button onclick="actualizar();">Guardar Cambios</button>
+			</div>
+	    	<div class="col" style="width:300px;padding-top: 15px;padding-bottom: 15px;">
+	    		<label id="usuario" class="bienvenido">Bienvenido(a)</label>
+	    	</div>
+        </div>
+        
+    </div>
+</div>
+<hr style="height: -12px" />
+<!--div class="section"><div class="container">
+    <div>
+        <div id="actualizarPanel">
+            <table class="" >
+                <tr>
+                    <td style="width:10px;">
+                    	<span class="menu-img" onclick="menuPop(1);"></span>
+                    </td>
+                    <td style="width:300px;">
+                        <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
+                    </td>
+                    <td class="" style="width:80px;font-family: Arial, Helvetica, sans-serif">
+						<input type="text" id="fecha" style="width: 80px; border-style: none" onchange="refrescar();"/>
+                    </td>
+                    <td style="width:200px;">
+                    	<button onclick="actualizar();">Guardar Cambios</button>
+                    </td>
+                    <td style="width:30%;">
+                        &nbsp;
+                    </td>
+                    <td style="width:300px;" style="text-align: center">
+                        &nbsp;
+                        <label id="usuario" class="bienvenido">Bienvenido(a)</label>
+                    </td>
+                </tr>
+            </table>
+            <hr style="height: -12px" />
+        </div>
+    </div>
+</div></div-->    
+
+<div class="section">
+	<div class="container">
+		<div class="fila">
+		<div class="col mo" style="width: 600px;margin: 5px;">
+			<table id="cuentas" > </table>
+		</div>
+        <div class="col" style="margin: 5px;">
+        	<!--div style="margin-top: 15%;margin-bottom: 15%;margin-left: 42%;border:3px solid #E8E8E8;padding: 4px;width: 325px;"-->
+        	<div class="mo box-shadow" style="margin-top: 15%;margin-bottom: 15%;margin-left: 42%;width: 325px;padding: 6px;">
+	            <table class="">
+	                <tr>
+	                    <td class="titulo" colspan="2">Nuevo Movimiento</td>
+	                </tr>
+	                <tr>
+	                    <td class="">Concepto</td>
+	                    <td>
+	                        <input id="concepto" style="margin-left: 0px; width:223px"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">Valor</td>
+	                    <td>
+	                        <input id="valor" style="sidth:89px" />
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">Sale de</td>
+	                    <td>
+	                        <select id="cuentaOrigen"> </select>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">Hacia</td>
+	                    <td>
+	                        <select id="cuentaDestino"> </select>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">&nbsp;</td>
+	                    <td style="text-align: right">
+	                        <button onclick="agregar();">Agregar</button>
+	                    </td>
+	                </tr>
+	            </table>
+            </div>
+	    </div>
+   	</div>
+	</div>
+</div>
+    
+<div class="section"><div class="container">
+    <div id="movimientosPanel" class="fila">
+        <div id="entradasPanel" class="col mo" style="width: 600px;margin: 5px;">
+        	<label style="font-weight: bold;">ENTRADAS</label>
+            <table id="entradas" class=""> </table>
+        </div>
+        <div id="salidasPanel" class="col mo scroll" style="width: 600px;margin: 5px;">
+        	<label style="font-weight: bold;">SALIDAS</label>
+            <table id="salidas" class=""> </table>
+    	</div>
+	</div>
+</div>
+</div>
+
+<div id="menu" class="config-menu">
+	<h2>Menu</h2>
+	<a class="btn-a v2" href="consulta.html"><div><span>Consulta</span></div></a>
+	<a class="btn-a v2" href="anual.html"><div><span>Anual</span></div></a>
+	<a class="btn-a v2" href="cuentas.html"><div><span>Cuentas</span></div></a>
+	<a class="btn-a v2" href="contacto.html"><div><span>Contacto</span></div></a>
+	<a class="btn-a v2" href="http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=Hotel" target="_blank" onclick="menuPop(0);"><div><span>Ayuda</span></div></a>
+	<a class="btn-a v2" href="#" onclick="logout();"><div><span>Salir</span></div></a>
+</div>
+</body>
+</html>
