@@ -278,3 +278,72 @@ input {
 	background: #1E90FF;
 	color: white;
 }
+.yes-cell {
+	display: none;
+}
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #808080;
+	font-size: small;
+}
+@media (max-width: 435px) {
+	.brand img {
+		width: 70%;
+	}
+	.login {
+		padding-top: 0px;
+	}
+	.login input {
+		width: 70%;
+	}
+	.login input,div {
+		margin: 1px 0px 1px 0px;		
+	}
+	.col {
+		float: inherit;
+	}
+	.btn-div {
+		padding: 8px 8px 8px 8px;
+		font-size: 14px;
+	}
+	.min-split {
+		margin: 0px;
+	}
+	.hr-header {
+		display: none;
+	}
+	.txt-main {
+		font-size: large; 
+	}
+	.no-cell {
+		display: none;
+	}
+	.yes-cell {
+		display: inherit;
+	}
+	.col-padding {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.idx-left img {
+		width: 70%;
+		margin-top: 5px;
+		margin-bottom: -45px;
+	}
+	.singup-pad {
+		padding: 0px 18% 0px 18%;
+	}
+	.a-info {
+		width: 93%;
+	}
+}
+@media (max-width: 360px) {
+	.singup-pad {
+		padding: 0px 15% 0px 15%;
+	}
+}
+@media (max-width: 320px) {
+	.singup-pad {
+		padding: 0px 11% 0px 11%;
+	}
+}

@@ -171,3 +171,13 @@ function menuPop(state)
     	$("#menu").removeClass("out");
 	}
 }
+function showLogin(state)
+{
+	if (state==1) {
+    	$("#btnshow").addClass("DN");
+    	$("#btnshow").removeClass("yes-cell");
+    	$("#btnlogin").removeClass("no-cell");
+   		$("#passwdlogin").removeClass("no-cell");
+    	$("#emaillogin").removeClass("no-cell");
+   }
+}

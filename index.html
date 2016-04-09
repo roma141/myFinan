@@ -42,9 +42,10 @@
     </div>
     <div class="col">
     <div class="login">
-        <input class="col min-split" id="emaillogin" placeholder="Email">
-        <input class="col min-split" id="passwdlogin" placeholder="Contraseña" type="password" onkeydown="if (event.keyCode == 13) login();"/>
-        <div class="col min-split btn-div" onclick="login();">Iniciar sesion</div>
+        <input class="col min-split no-cell" id="emaillogin" placeholder="Email">
+        <input class="col min-split no-cell" id="passwdlogin" placeholder="Contraseña" type="password" onkeydown="if (event.keyCode == 13) login();"/>
+        <div id="btnlogin" class="col min-split btn-div no-cell" onclick="login();">Iniciar sesion</div>
+        <div id="btnshow" class="col min-split btn-div yes-cell" onclick="showLogin(1);">Iniciar sesion</div>
     </div>
     </div>
 </div>
@@ -53,7 +54,7 @@
 <div class="section v2">
 <div class="container fila">
     <div class="col col-padding idx-left">
-        <div class="txt-main">
+        <div class="txt-main no-cell">
             MyFinan te ayuda a conocer y reducir tus gastos<br />
             para que puedas vivir bien sin exceder tus ingresos<br />
             y ahorrar poco a poco para ese sueño...
@@ -62,7 +63,7 @@
     </div>
     <div class="col col-padding">
         <div>
-        <table>
+        <table class="singup-pad">
             <tr>
                 <td class="td-singup big">
                     Regístrate
@@ -94,7 +95,7 @@
                     <div class="btn-div" id="registrarButton" onclick="registrar()">Regístrame</div>
                 </td>
             </tr>
-            <tr>
+            <tr class="no-cell">
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
@@ -105,6 +106,12 @@
                 </td>
             </tr>
         </table>
+        <div class="txt-main yes-cell singup-pad">
+            MyFinan te ayuda a conocer y reducir tus gastos<br />
+            para que puedas vivir bien sin exceder tus ingresos<br />
+            y ahorrar poco a poco para ese sueño...
+        </div>
+        <div class="yes-cell">&nbsp;</div>
         <div class="a-info">
         <a id="ayudaLinkButton" href="ayudaconcepto.html">¿Quieres saber más de MyFinan?</a>
         </div>
@@ -118,11 +125,13 @@
 </div>
 </div>
 <footer>
-    <div style="font-family: Arial, Helvetica, sans-serif; color: #808080; font-size: small;">
+    <div class="yes-cell">&nbsp;</div>
+    <div class="footer">
         MyFinan<span title="HPHP"> </span>
         <span id="rtime" title="118">©</span>
         <span title="10.136.233.124">2010 - 2016</span>
     </div>
+    <div class="yes-cell">&nbsp;</div>
 </footer>
 </body>
 </html>
