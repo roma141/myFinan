@@ -286,9 +286,47 @@ input {
 	color: #808080;
 	font-size: small;
 }
+@media (max-width: 769px) {
+	.login {
+		padding-top: 0px;
+	}
+	.col {
+		float: inherit;
+	}
+	.col-padding {
+		padding: 0;
+	}
+	.singup-pad {
+		padding: 0px 30% 0px 30%;
+	}
+	.idx-left img {
+		width: 80%;
+	}
+	.hr-header {
+		margin: 5px 0px 5px 0px;
+	}
+	.singup-pad {
+		margin-top: -100px;
+	}
+	.td-singup {
+		font-size: 40px;
+	}
+	.txt-main {
+		text-align: center;
+	}
+}
 @media (max-width: 435px) {
 	.brand img {
 		width: 70%;
+	}
+	.txt-main {
+		text-align: left;
+	}
+	.td-singup {
+		font-size: x-large;
+	}
+	.singup-pad {
+		margin-top: 0px;
 	}
 	.login {
 		padding-top: 0px;
