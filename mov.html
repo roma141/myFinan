@@ -23,7 +23,8 @@
 	<script type="text/javascript" src="js/jcomun.js"></script>
 	<script type="text/javascript" src="js/jtabla.js"></script>
 	<script type="text/javascript" src="js/jgoogle.js"></script>
-		
+    <script type="text/javascript" src="js/live.js"></script>
+
 	<script>
 		$(document).ready(function() {
 			pagina = "fnmov";
@@ -40,80 +41,87 @@
 <div class="section">
 	<div class="container">
 		<div class="fila">
-			<div class="col" style="width:20px;padding-top: 15px;padding-bottom: 15px;">
-				<span class="menu-img" onclick="menuPop(1);"></span>
+			<div class="col2 menu-img">
+				<span onclick="menuPop(1);"></span>
 			</div>
-	    	<div class="col" style="width:300px;">
+	    	<div class="col2 brand2">
 	    		<img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
 	    	</div>
-	        <div class="col" style="width:80px;font-family: Arial, Helvetica, sans-serif;padding-top: 15px;padding-bottom: 15px;">
-	        	<input type="text" id="fecha" style="width: 80px;border-style: none" onchange="refrescar();"/>
+	        <div class="col2 date">
+	        	<input type="text" id="fecha" onchange="refrescar();"/>
 	        </div>
-			<div class="col" style="width:200px;padding-top: 15px;padding-bottom: 15px;">
-				<button onclick="actualizar();">Guardar Cambios</button>
+			<div class="col2 btn_save">
+				<button onclick="actualizar();">Guardar</button>
 			</div>
-	    	<div class="col" style="width:300px;padding-top: 15px;padding-bottom: 15px;">
-	    		<label id="usuario" class="bienvenido">Bienvenido(a)</label>
+	    	<div class="col2 welcome">
+	    		<label id="usuario">Bienvenido(a)</label>
 	    	</div>
         </div>
         
     </div>
 </div>
-<hr style="height: -12px" />
-<!--div class="section"><div class="container">
-    <div>
-        <div id="actualizarPanel">
-            <table class="" >
-                <tr>
-                    <td style="width:10px;">
-                    	<span class="menu-img" onclick="menuPop(1);"></span>
-                    </td>
-                    <td style="width:300px;">
-                        <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
-                    </td>
-                    <td class="" style="width:80px;font-family: Arial, Helvetica, sans-serif">
-						<input type="text" id="fecha" style="width: 80px; border-style: none" onchange="refrescar();"/>
-                    </td>
-                    <td style="width:200px;">
-                    	<button onclick="actualizar();">Guardar Cambios</button>
-                    </td>
-                    <td style="width:30%;">
-                        &nbsp;
-                    </td>
-                    <td style="width:300px;" style="text-align: center">
-                        &nbsp;
-                        <label id="usuario" class="bienvenido">Bienvenido(a)</label>
-                    </td>
-                </tr>
-            </table>
-            <hr style="height: -12px" />
-        </div>
-    </div>
-</div></div-->    
-
+<hr class="hr-header" />
 <div class="section">
 	<div class="container">
 		<div class="fila">
-		<div class="col mo" style="width: 600px;margin: 5px;">
-			<table id="cuentas" > </table>
-		</div>
-        <div class="col" style="margin: 5px;">
-        	<!--div style="margin-top: 15%;margin-bottom: 15%;margin-left: 42%;border:3px solid #E8E8E8;padding: 4px;width: 325px;"-->
-        	<div class="mo box-shadow" style="margin-top: 15%;margin-bottom: 15%;margin-left: 42%;width: 325px;padding: 6px;">
-	            <table class="">
+        <div class="col2 yes-cell">
+    	<div class="mo adding-box">
+	            <table>
 	                <tr>
 	                    <td class="titulo" colspan="2">Nuevo Movimiento</td>
 	                </tr>
 	                <tr>
 	                    <td class="">Concepto</td>
 	                    <td>
-	                        <input id="concepto" style="margin-left: 0px; width:223px"/>
+	                        <input placeholder="Breve descripcion" id="concepto"/>
 	                    </td>
 	                </tr>
 	                <tr>
 	                    <td class="">Valor</td>
 	                    <td>
-	                        <input id="valor" style="sidth:89px" />
+	                        <input placeholder="Dinero sin comas o puntos" id="valor"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">Sale de</td>
+	                    <td>
+	                        <select id="cuentaOrigen"> </select>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">Hacia</td>
+	                    <td>
+	                        <select id="cuentaDestino"> </select>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">&nbsp;</td>
+	                    <td style="float: right">
+	                        <button onclick="agregar();">Agregar</button>
+	                    </td>
+	                </tr>
+	            </table>
+            </div>
+	    </div>
+		<div class="col2 mo acount">
+			<table id="cuentas"> </table>
+		</div>
+        <div class="col2 no-cell">
+    	<div class="mo adding-box box-shadow">
+	            <table>
+	                <tr>
+	                    <td class="titulo" colspan="2">Nuevo Movimiento</td>
+	                </tr>
+	                <tr>
+	                    <td class="">Concepto</td>
+	                    <td>
+	                        <input placeholder="Breve descripcion" id="concepto"/>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="">Valor</td>
+	                    <td>
+	                        <input placeholder="Valor o dinero" id="valor"/>
 	                    </td>
 	                </tr>
 	                <tr>
@@ -140,14 +148,13 @@
    	</div>
 	</div>
 </div>
-    
 <div class="section"><div class="container">
     <div id="movimientosPanel" class="fila">
-        <div id="entradasPanel" class="col mo" style="width: 600px;margin: 5px;">
+        <div id="entradasPanel" class="col mo inOut">
         	<label style="font-weight: bold;">ENTRADAS</label>
             <table id="entradas" class=""> </table>
         </div>
-        <div id="salidasPanel" class="col mo scroll" style="width: 600px;margin: 5px;">
+        <div id="salidasPanel" class="col mo inOut scroll">
         	<label style="font-weight: bold;">SALIDAS</label>
             <table id="salidas" class=""> </table>
     	</div>

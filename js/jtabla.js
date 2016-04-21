@@ -13,7 +13,7 @@ function cadTabla(tabla, tagID, fundetalle)
 	var cad = "", tit="", tot="", estado="", f="", finput, val;
 	
 	$.each(tabla.titulos, function(i,item) {
-		tit = tit + '<th class="encabezado" style="width:'+ item.ancho +'px; text-align:' + item.alinea + '">' + item.titulo + '</th>';
+		tit = tit + '<th class="encabezado" style="text-align:' + item.alinea + '">' + item.titulo + '</th>';
 	});
 
 	var f;
