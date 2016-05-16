@@ -33,6 +33,8 @@ function dibujaCuentas(datos)
 	//$('#cuentas').html( cadTabla(datos, "cuentas", "leeEntradasySalidas"));
 	llenaSelector(gdatos.datos, "cuentaOrigen");
 	llenaSelector(gdatos.datos, "cuentaDestino");
+	llenaSelector(gdatos.datos, "cuentaOrigen2");
+	llenaSelector(gdatos.datos, "cuentaDestino2");
 
 	if (typeof gIDcuenta=='undefined' || gIDcuenta==null || gIDcuenta==0)
 		gIDcuenta=gdatos.datos[0].ID;
@@ -49,6 +51,8 @@ function dibujaCuentas(datos)
     leeEntradasySalidas(gIDcuenta);
     poneSelector(gIDcuentaOrigen, "cuentaOrigen");
     poneSelector(gIDcuentaDestino, "cuentaDestino");
+    poneSelector(gIDcuentaOrigen, "cuentaOrigen2");
+    poneSelector(gIDcuentaDestino, "cuentaDestino2");
 }
 
 function leeEntradasySalidas(IDcuenta)
@@ -98,6 +102,32 @@ function agregar()
 	
 	var valor = $("#valor").val().replace("$","").replace(",","").replace(",","");
 	AgregaMovimientoF($("#cuentaOrigen").val(), $("#cuentaDestino").val(), $("#concepto").val(), valor, new Date($("#fecha").val()), refrescar);
+}
+
+function agregar2()
+{
+	if ($("#cuentaOrigen2").val()==$("#cuentaDestino2").val()) {
+		alert("Las cuentas deben ser diferentes");
+		return;		
+	}
+	if ($("#valor2").val()=="") {
+		alert("Debe introducir un valor");		
+		return;		
+	}
+	if ($("#valor2").val()<=0) {
+		alert("El valor debe ser mayor que cero");		
+		return;		
+	}
+	if ($("#concepto2").val()=="") {
+		alert("Debe escribir un concepto");		
+		return;		
+	}
+	
+	gIDcuentaOrigen=$("#cuentaOrigen2").val();
+	gIDcuentaDestino=$("#cuentaDestino2").val();
+	
+	var valor = $("#valor2").val().replace("$","").replace(",","").replace(",","");
+	AgregaMovimientoF($("#cuentaOrigen2").val(), $("#cuentaDestino2").val(), $("#concepto2").val(), valor, new Date($("#fecha").val()), refrescar);
 }
 
 function eliminar(ID)
