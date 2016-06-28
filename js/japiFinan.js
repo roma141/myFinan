@@ -2,8 +2,8 @@
  * @author botpi
  */
 
-// -------------------- index
-    
+/*-------------------- index
+*/    
 function LoginF(funcion)
 {
 	$.ajax({
@@ -29,8 +29,8 @@ function AgregaClienteF(nombre, funcion)
 	 	});
 }
 
-// -------------------- movimientos
-    
+/*-------------------- movimientos
+*/    
 function LeeCuentasF(funcion)
 {
 	$.ajax({
@@ -126,8 +126,8 @@ function ModificaMovF(IDmov, fecha, concepto, valor, IDcuentamas, IDcuentamenos,
 	 	});
 }
 
-// -------------------- cuentas
-    
+/*-------------------- cuentas
+*/    
 function CuentasEditorF(funcion)
 {
 	$.ajax({
@@ -169,7 +169,7 @@ function ModificaCuentaF(IDcuenta, nombre, saldo, fechasaldo, esContinua, esgast
 	 	});
 }
 
-function EliminaCuentaF(IDcuenta, funcion) //falta
+function EliminaCuentaF(IDcuenta, funcion) /*//falta*/
 {
 	var datos = {};
 	datos.IDcuenta = IDcuenta;
@@ -180,8 +180,8 @@ function EliminaCuentaF(IDcuenta, funcion) //falta
 	 	});
 }
 
-// -------------------- anual
-    
+/*-------------------- anual
+*/    
 function YearsF(funcion)
 {
 	$.ajax({

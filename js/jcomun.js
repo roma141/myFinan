@@ -12,8 +12,8 @@ function logout()
 	window.location.assign("index.html");
 }
 
-// -----------------------------
-
+/*-----------------------------
+*/
 function getCookie(c_name)
 {
 	var c_value, c_start, c_end;
@@ -79,8 +79,8 @@ function extraeNombre(lista, campo)
 	return l;	
 }
 
-// ------------------------------- Selectores
-
+/*------------------------------- Selectores
+*/
 function llenaSelector(datos, control)
 {
 	var cad = "";
@@ -124,8 +124,8 @@ function poneSelectorxID(ID, control)
     }
 }
 
-// ----------------- formatos
-
+/*----------------- formatos
+*/
 Number.prototype.formatMoney = function(c, d, t){
 var n = this, 
     c = isNaN(c = Math.abs(c)) ? 2 : c, 
@@ -137,8 +137,7 @@ var n = this,
    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
  };
  
-// ------------------------- datepicker
-
+/*-------------------------datepicker*/
 function poneDatePicker(selector, formato, fecha)
 {
 	$(selector).datepicker();

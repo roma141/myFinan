@@ -32,7 +32,7 @@ function dibujaCuentas(datos)
 	gdatos = datos;
 	$('#usuario').html("Bienvenido " + gdatos.usuario.nombre);
 	dibujaCuadroCuentas();
-	//$('#cuentas').html( cadTabla(datos, "cuentas", "leeEntradasySalidas"));
+	/*$('#cuentas').html( cadTabla(datos, "cuentas", "leeEntradasySalidas"));*/
 	llenaSelector(gdatos.datos, "cuentaOrigen");
 	llenaSelector(gdatos.datos, "cuentaDestino");
 	llenaSelector(gdatos.datos, "cuentaOrigen2");
@@ -72,8 +72,8 @@ function dibujaMovimientos(datos)
 {
 	if (datos) {
 		gdatosmov = datos;
-		//$('#entradas').html( cadTabla(gdatosmov.entradas, "entradas", ""));
-		//$('#salidas').html( cadTabla(gdatosmov.salidas, "salidas", ""));
+		/*$('#entradas').html( cadTabla(gdatosmov.entradas, "entradas", ""));
+		$('#salidas').html( cadTabla(gdatosmov.salidas, "salidas", ""));*/
 		dibujaCuadroEntradas();
 		dibujaCuadroSalidas();
 	}

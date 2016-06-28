@@ -28,8 +28,8 @@ function dibujaCuentas(datos)
 		window.location.assign("index.html");		
 	}
 	gdatos = datos;
-	//$('#usuario').html("Bienvenido " + gdatos.usuario.nombre);
-	dibujaCuadro();
+/*	$('#usuario').html("Bienvenido " + gdatos.usuario.nombre);
+*/	dibujaCuadro();
 }
 
 function dibujaCuadro()
