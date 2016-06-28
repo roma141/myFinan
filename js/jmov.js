@@ -16,7 +16,9 @@ function refrescar()
 {
 	cambios = [];
 	$("#valor").val("");
-	$("#concepto").val("");	
+	$("#concepto").val("");
+	$("#valor2").val("");
+	$("#concepto2").val("");	
 	$("#concepto").focus();
 	CuentasF(new Date($("#fecha").val()), dibujaCuentas);
 }

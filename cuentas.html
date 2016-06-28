@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>MyFinan - Movimientos</title>
-	<meta name="description" content="Finanzas personales" />
+	<meta name="description" content="Configuracion para tus finanzas personales" />
 	<meta name="author" content="Botpi" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="js/jcomun.js"></script>
 	<script type="text/javascript" src="js/jtabla.js"></script>
 	<script type="text/javascript" src="js/jgoogle.js"></script>
+    <!-- <script type="text/javascript" src="js/live.js"></script> -->
 		
 	<script>
 		$(document).ready(function() {
@@ -38,51 +39,41 @@
 <div id="mask2" class="DN mask" onclick="menuPop(0);"> </div>
 	
 <div class="section"><div class="container">
-    <div>
-        <div id="actualizarPanel">
-            <table class="" >
-                <tr>
-                    <td style="width:10px;">
-                    	<span class="menu-img" onclick="menuPop(1);"></span>
-                    </td>
-                    <td style="width:300px;">
-                        <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
-                    </td>
-                    <td class="" style="width:80px;font-family: Arial, Helvetica, sans-serif">
-						<input type="text" id="fecha" style="width: 80px; border-style: none"/>
-                    </td>
-                    <td class="">
-                    	<button onclick="actualizar();">Actualizar</button>
-                    </td>
-                    <td style="width:30%;">
-                        &nbsp;
-                    </td>
-                    <td style="width:300px;" style="text-align: center">
-                        &nbsp;
-                        <label id="usuario" class="bienvenido"> </label>
-                    </td>
-                </tr>
-            </table>
-            <hr style="height: -12px" />
+    <div class="fila" id="actualizarPanel">
+        <div class="col2 menu-img">
+        	<span onclick="menuPop(1);"></span>
         </div>
-    </div>
+        <div class="col2 brand2">
+            <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
+        </div>
+        <div class="col2 date">
+			<input type="text" id="fecha" style="width: 80px; border-style: none"/>
+        </div>
+        <div class="col2 btn_save">
+        	<button onclick="actualizar();">Actualizar</button>
+        </div>
+        <div class="col2 welcome">
+            <label id="usuario"> </label>
+        </div>
+	</div>
 </div></div>    
 <div class="section">
 	<div class="container">
 		<div class="fila">
-		<div class="col mo" style="width: 700px;margin: 5px;">
-			<table id="cuentas" > </table>
+		<div class="col mo">
+			<table class="no-cell" id="cuentas" > </table>
 		</div>
-        <div class="col" style="margin: 5px;">
+		<label class="yes-cell" id="errWindow">Pantalla muy pequeña, intente con el celular horizontalmente</label>
+        <div class="col" style="margin: 20px;">
         	<!--div style="margin-top: 15%;margin-bottom: 15%;margin-left: 42%;border:3px solid #E8E8E8;padding: 4px;width: 325px;"-->
-        	<div class="mo box-shadow" style="margin-top: 15%;margin-bottom: 15%;margin-left: 42%;width: 325px;padding: 6px;">
-	            <table class="">
+        	<div class="mo box-shadow no-cell" style="width: 280px;padding: 6px;">
+	            <table>
 	                <tr>
 	                    <td class="titulo" colspan="2">Nueva Cuenta</td>
 	                </tr>
 	                <tr>
 	                    <td class="">Nombre</td>
-	                    <td><input id="nombre" style="margin-left: 0px; width:223px"/></td>
+	                    <td><input id="nombre" style="margin-left: 0px; width:223px;height: 30px;"/></td>
 	                </tr>
 <!--	                <tr>
 	                    <td class="">Saldo Inicial</td>
@@ -108,7 +99,7 @@
 	                <tr>
 	                    <td class="">&nbsp;</td>
 	                    <td style="text-align: right">
-	                        <button onclick="agregar();">Agregar</button>
+	                        <br><button onclick="agregar();">Agregar</button>
 	                    </td>
 	                </tr>
 	            </table>

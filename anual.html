@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="js/jcomun.js"></script>
 	<script type="text/javascript" src="js/jtabla.js"></script>
 	<script type="text/javascript" src="js/jgoogle.js"></script>
+    <!-- <script type="text/javascript" src="js/live.js"></script> -->
 		
 	<script>
 		$(document).ready(function() {
@@ -38,40 +39,29 @@
 <div id="mask2" class="DN mask" onclick="menuPop(0);"> </div>
 	
 <div class="section"><div class="container">
-    <div>
-        <div id="actualizarPanel">
-            <table class="" >
-                <tr>
-                    <td style="width:10px;">
-                    	<span class="menu-img" onclick="menuPop(1);"> </span>
-                    </td>
-                    <td style="width:300px;">
-                        <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
-                    </td>
-                    <td >
-						<label>Año: </label>
-                    </td>
-                    <td class="">
-                    	<select id="year" onchange="seeYear();"> </select>
-                    </td>
-                    <td style="width:30%;">
-                        &nbsp;
-                    </td>
-                    <td style="width:300px;" style="text-align: center">
-                        &nbsp;
-                        <label id="usuario" class="bienvenido"> </label>
-                    </td>
-                </tr>
-            </table>
-            <hr style="height: -12px" />
+    <div class="fila" id="actualizarPanel">
+        <div class="col2 menu-img">
+        	<span onclick="menuPop(1);"> </span>
+        </div>
+        <div class="col2 brand2">
+            <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
+        </div>
+        <div class="col2 year">
+        	Año: 
+        	<select id="year" onchange="seeYear();"> </select>
+        </div>
+        <div class="col2 welcome">
+            <label id="usuario"> </label>
         </div>
     </div>
-</div></div>    
+</div></div>
+<hr class="hr-header"> 
 <div class="section">
 	<div class="container">
 		<div class="fila">
-			<div class="col mo" style="width: 1100px;margin: 5px;">
-				<table id="cuentas" > </table>
+			<div class="col mo">
+				<table class="no-cell" id="cuentas"> </table>
+				<label class="yes-cell" id="errWindow">Pantalla muy pequeña, intente con el celular horizontalmente</label>
 			</div>
 	   	</div>
 	</div>

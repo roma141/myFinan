@@ -3,18 +3,14 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
 	<title>MyFinan - Consulta</title>
-	<meta name="description" content="Finanzas personales" />
+	<meta name="description" content="Para que mires tus finanzas personales de una manera diferente" />
 	<meta name="author" content="Botpi" />
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/myFinan.css">
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -23,7 +19,7 @@
 	<script type="text/javascript" src="js/jcomun.js"></script>
 	<script type="text/javascript" src="js/jtabla.js"></script>
 	<script type="text/javascript" src="js/jgoogle.js"></script>
-		
+	<!-- <script type="text/javascript" src="js/live.js"></script> -->
 	<script>
 		$(document).ready(function() {
 			pagina = "fnconsulta";
@@ -36,52 +32,42 @@
 <body>
 <div id="mask" class="DN" onclick="cancelar();"> </div>
 <div id="mask2" class="DN mask" onclick="menuPop(0);"> </div>
-	
 <div class="section"><div class="container">
-    <div>
-        <div id="actualizarPanel">
-            <table class="" >
-                <tr>
-                    <td style="width:10px;">
-                    	<span class="menu-img" onclick="menuPop(1);"></span>
-                    </td>
-                    <td style="width:300px;">
-                        <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
-                    </td>
-                    <td class="" style="width:80px;font-family: Arial, Helvetica, sans-serif;padding: 6px;">
-                    	Desde 
-						<input type="text" id="desde" style="width: 80px; border-style: solid;padding: 6px;"/>
-                    </td>
-                    <td class="" style="width:80px;font-family: Arial, Helvetica, sans-serif;padding: 6px;">
-                    	Hasta 
-						<input type="text" id="hasta" style="width: 80px; border-style: solid;padding: 6px;"/>
-                    </td>
-                    <td class="" style="width:80px;font-family: Arial, Helvetica, sans-serif;padding: 6px;">
-                    	Cuenta 
-                    	<select style="padding: 6px;" id="cuenta"> </select>
-                    </td>
-                    <td class="" style="padding-left: 30px;">
-                    	<button style="padding: 6px; padding-left: 12px; padding-right: 12px;" onclick="ejecutar();">Ejecutar</button>
-                    </td>
-                    <td style="width:30%;">
-                        &nbsp;
-                    </td>
-                </tr>
-            </table>
-            <hr style="height: -12px" />
+    <div class="fila" id="actualizarPanel">
+        <div class="col2 menu-img">
+        	<span onclick="menuPop(1);"></span>
+        </div>
+        <div class="col2 brand2">
+            <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
+        </div>
+        <div class="col2 date2">
+        	Desde 
+			<input type="text" id="desde"/>
+        </div>
+        <div class="col2 date2">
+        	Hasta 
+			<input type="text" id="hasta"/>
+        </div>
+        <div class="col2 input-select">
+        	Cuenta 
+        	<select id="cuenta"> </select>
+        </div>
+        <div class="col2 btn_play">
+        	<button onclick="ejecutar();">Ejecutar</button>
         </div>
     </div>
-</div></div>    
+</div></div>
+<hr class="hr-header">    
 <div class="section">
 	<div class="container">
 		<div class="fila">
 			<div class="col mo box-shadow" style="margin: 5px;">
-				<table id="consulta" > </table>
+				<table class="no-cell" id="consulta" > </table>
 			</div>
+			<label class="yes-cell" id="errWindow">Pantalla muy pequeña, intente con el celular horizontalmente</label>
    		</div>
 	</div>
 </div>
-
 <div id="menu" class="config-menu">
 	<h2>Menu</h2>
 	<a class="btn-a v2" href="mov.html"><div><span>Movimientos</span></div></a>
