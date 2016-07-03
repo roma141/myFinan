@@ -42,3 +42,8 @@ function verCreacion(datos)
 	else	
 		alert("ya existe una cuenta con este email");
 }
+function inicioIndex() {
+	if (localStorage.getItem("encabezado")) {
+		window.location.assign("mov.html");
+	}
+}

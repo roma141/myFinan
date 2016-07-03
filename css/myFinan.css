@@ -44,7 +44,6 @@ input {
     background-image: -webkit-linear-gradient(bottom, #069, #2b8dcf);
     background-image: -o-linear-gradient(bottom, #069, #2b8dcf);
     background-image: linear-gradient(to top, #069, #2b8dcf);
-    ;
 }
 .btn-a {
     cursor: pointer;
