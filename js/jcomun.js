@@ -8,7 +8,8 @@ function getURLParameter(name) {
 
 function logout()
 {
-	document.cookie = "encabezado='',''";
+	// document.cookie = "encabezado='',''";
+	localStorage.setItem("encabezado", "");
 	window.location.assign("index.html");
 }
 

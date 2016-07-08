@@ -4,7 +4,8 @@
 
 function inicioConsulta()
 {
-	encabezado = getCookie("encabezado");
+	// encabezado = getCookie("encabezado");
+	encabezado = localStorage.getItem("encabezado");
 	if (encabezado==null || encabezado=="")
 		encabezado="'',''";
 	pagina = "fnmov";

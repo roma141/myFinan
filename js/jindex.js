@@ -13,8 +13,9 @@ function login()
 function verUsuario(datos)
 {
 	if (datos) {
-		document.cookie = "encabezado=" + encabezado;
-		window.location.assign("mov.html");		
+		// document.cookie = "encabezado=" + encabezado;
+		localStorage.setItem("encabezado", encabezado);
+		window.location.assign("mov.html");
 	}
 	else
 		alert("nombre de usuario o clave incorrectos");
@@ -40,4 +41,9 @@ function verCreacion(datos)
 		LoginF(verUsuario);
 	else	
 		alert("ya existe una cuenta con este email");
+}
+function inicioIndex() {
+	if (localStorage.getItem("encabezado")) {
+		window.location.assign("mov.html");
+	}
 }
