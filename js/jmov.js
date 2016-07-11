@@ -170,10 +170,10 @@ function anotars(IDcuenta)
 
 function modificar(IDmov)
 {	if (IDmov>0)
-		ModificaMovF(IDmov, $("#fecha-" + IDmov).val(), $("#concepto-" + IDmov).val(), $("#valorf-" + IDmov).val().replace(/,/g, ""), $("#contra-" + IDmov).val(), gIDcuenta, refrescar);
+		ModificaMovF(IDmov, $("#fecha-" + IDmov).val(), $("#concepto-" + IDmov).val(), $("#valorf-" + IDmov).val().replace(/,/g, ""), gIDcuenta, $("#contra-" + IDmov).val(), refrescar);
 	else {
 		IDmov=-IDmov;
-		ModificaMovF(IDmov, $("#fechas-" + IDmov).val(), $("#conceptos-" + IDmov).val(), $("#valorfs-" + IDmov).val().replace(/,/g, ""), gIDcuenta, $("#contras-" + IDmov).val(), refrescar);
+		ModificaMovF(IDmov, $("#fechas-" + IDmov).val(), $("#conceptos-" + IDmov).val(), $("#valorfs-" + IDmov).val().replace(/,/g, ""), $("#contras-" + IDmov).val(), gIDcuenta, refrescar);
 	}
 }
 
