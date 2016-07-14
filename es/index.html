@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <script type="text/javascript">
-       var userLang = navigator.language || navigator.userLanguage; 
-       if (userLang.indexOf("es") >= 0) {
-           window.location.assign("es/");
-       }
-    </script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>MyFinan - Your personal finances</title>
-	<meta name="description" content="personal finances in a quick and easy way that can be used from anywhere in the world including smartphones you just need an internet connection" />
+	<title>MyFinan - Sus finanzas personales</title>
+	<meta name="description" content="Finanzas personales de una manera facil y rapida que se puede usar desde cualquier parte del mundo y desde celulares solo necesitas una conexion a internet" />
 	<meta name="author" content="Botpi" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/myFinan.css">
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<link rel="stylesheet" type="text/css" href="../css/myFinan.css">
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 		
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/jindex.js"></script>
-	<script type="text/javascript" src="js/japiFinan.js"></script>
-	<script type="text/javascript" src="js/jcomun.js"></script>
-	<script type="text/javascript" src="js/jgoogle.js"></script>
-    <script type="text/javascript" src="js/live.js"></script>
+	<script type="text/javascript" src="../js/jindex.js"></script>
+	<script type="text/javascript" src="../js/japiFinan.js"></script>
+	<script type="text/javascript" src="../js/jcomun.js"></script>
+	<script type="text/javascript" src="../js/jgoogle.js"></script>
+    <script type="text/javascript" src="../js/live.js"></script>
 		
 	<script>
 		$( document ).ready(function() {
 			pagina = "fnindex";
-			titulo = "MyFinan - Your personal finances";
+			titulo = "MyFinan - Sus finanzas personales";
 			ayuda = "http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=GTienda:Acerca_de";
 			leeServidor();
             inicioIndex();
@@ -44,15 +38,15 @@
 <div class="container fila">
     <div class="col">
     <div class="brand">
-        <img alt="MyFinan" src="images/brand-v2.jpg" />
+        <img alt="MyFinan" src="images/marca-v2.jpg" />
     </div>
     </div>
     <div class="col">
     <div class="login">
         <input class="col min-split no-cell" id="emaillogin" placeholder="Email">
-        <input class="col min-split no-cell" id="passwdlogin" placeholder="Password" type="password" onkeydown="if (event.keyCode == 13) login();"/>
-        <div id="btnlogin" class="col min-split btn-div no-cell" onclick="login();">Log in</div>
-        <div id="btnshow" class="col min-split btn-div yes-cell" onclick="showLogin(1);">Log in</div>
+        <input class="col min-split no-cell" id="passwdlogin" placeholder="Contraseña" type="password" onkeydown="if (event.keyCode == 13) login();"/>
+        <div id="btnlogin" class="col min-split btn-div no-cell" onclick="login();">Iniciar sesion</div>
+        <div id="btnshow" class="col min-split btn-div yes-cell" onclick="showLogin(1);">Iniciar sesion</div>
     </div>
     </div>
 </div>
@@ -62,23 +56,23 @@
 <div class="container fila">
     <div class="col col-padding idx-left">
         <div class="txt-main no-cell">
-            MyFinan helps you understand and reduce your expenses<br />
-            so you can live well without exceeding your income<br />
-            and gradually save for that dream...
+            MyFinan te ayuda a conocer y reducir tus gastos<br />
+            para que puedas vivir bien sin exceder tus ingresos<br />
+            y ahorrar poco a poco para ese sueño...
         </div>
-        <img alt="Positive action of myFinan" src="images/graphic-v3.jpg" />
+        <img alt="Acción Positiva de myFinan" src="images/grafico-v3.jpg" />
     </div>
     <div class="col col-padding">
         <div>
         <table class="singup-pad">
             <tr>
                 <td class="td-singup big">
-                    Sign up
+                    Regístrate
                 </td>
             </tr>
             <tr>
                 <td class="td-singup">
-                    It's free
+                    Es gratis
                 </td>
             </tr>
             <tr>
@@ -86,20 +80,20 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td><input id="nombre" placeholder="Name" style="width:218px"></td>
+                <td><input id="nombre" placeholder="Nombre(s)" style="width:218px"></td>
             </tr>
             <tr>
                 <td><input id="email" placeholder="Email" style="width:218px"></td>
             </tr>
             <tr>
-                <td><input id="clave" placeholder="Password" style="width:218px" type="password" onkeydown="if (event.keyCode == 13) registrar();"></td>
+                <td><input id="clave" placeholder="Contraseña" style="width:218px" type="password" onkeydown="if (event.keyCode == 13) registrar();"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td>
-                    <div class="btn-div" id="registrarButton" onclick="registrar()">Sign me up</div>
+                    <div class="btn-div" id="registrarButton" onclick="registrar()">Regístrame</div>
                 </td>
             </tr>
             <tr class="no-cell">
@@ -109,24 +103,24 @@
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <label id="yaExisteLabel" style="display: none; color: red">User already exists</label>
+                    <label id="yaExisteLabel" style="display: none; color: red">El Usuario Ya Existe</label>
                 </td>
             </tr>
         </table>
         <div class="txt-main yes-cell singup-pad">
-            MyFinan helps you understand and reduce your expenses<br />
-            so you can live well without exceeding your income<br />
-            and gradually save for that dream...
+            MyFinan te ayuda a conocer y reducir tus gastos<br />
+            para que puedas vivir bien sin exceder tus ingresos<br />
+            y ahorrar poco a poco para ese sueño...
         </div>
         <div class="yes-cell">&nbsp;</div>
         <div class="a-info">
-        <a id="ayudaLinkButton" href="ayudaconcepto.html">Want to know more about MyFinan?</a>
+        <a id="ayudaLinkButton" href="ayudaconcepto.html">¿Quieres saber más de MyFinan?</a>
         </div>
         <div class="a-info">
-        <a id="ayudaMovLinkButton" href="ayudamov.html" onclick="ayudaMov()">How does MyFinan?</a>
+        <a id="ayudaMovLinkButton" href="ayudamov.html" onclick="ayudaMov()">¿Cómo funciona MyFinan?</a>
         </div>
         <div class="a-info">
-        <a id="contactoLinkButton" href="contacto.html" onclick="contacto()">Contact</a>
+        <a id="contactoLinkButton" href="contacto.html" onclick="contacto()">Contáctanos</a>
         </div>
     </div>
 </div>
