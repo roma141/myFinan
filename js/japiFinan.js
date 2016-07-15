@@ -96,12 +96,12 @@ function AgregaMovimientoF(IDcuentaorigen, IDcuentadestino, concepto, valor, fec
 	 	});
 }
     
-function MovimientosF(IDcuenta, desde, hasta, funcion)
+function MovimientosF(IDcuenta, desde, hasta, tags, funcion)
 {
 	var d = $.datepicker.formatDate("yy-mm-dd", desde);
 	var h = $.datepicker.formatDate("yy-mm-dd", hasta);
 	$.ajax({
-		url: "http://" + servidor + "/function/MovimientosF(" + encabezado + "," + IDcuenta + ",'" + d + "','" + h + "')?pagina=" + pagina,
+		url: "http://" + servidor + "/function/MovimientosF(" + encabezado + "," + IDcuenta + ",'" + d + "','" + h + "','" + tags + "')?pagina=" + pagina,
 		jsonp: "callback",
 		dataType: "jsonp",
 		success: function( response ) {
