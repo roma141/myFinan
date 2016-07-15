@@ -3,74 +3,75 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<title>MyFinan - Informe Anual</title>
-	<meta name="description" content="Finanzas personales" />
+	<title>MyFinan - Consulta</title>
+	<meta name="description" content="Para que mires tus finanzas personales de una manera diferente" />
 	<meta name="author" content="Botpi" />
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/myFinan.css">
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
-		
+	<link rel="stylesheet" type="text/css" href="../css/myFinan.css">
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-	<script type="text/javascript" src="js/janual.js"></script>
-	<script type="text/javascript" src="js/japiFinan.js"></script>
-	<script type="text/javascript" src="js/jcomun.js"></script>
-	<script type="text/javascript" src="js/jtabla.js"></script>
-	<script type="text/javascript" src="js/jgoogle.js"></script>
-    <!-- <script type="text/javascript" src="js/live.js"></script> -->
-		
+	<script type="text/javascript" src="../js/jconsulta.js"></script>
+	<script type="text/javascript" src="../js/japiFinan.js"></script>
+	<script type="text/javascript" src="../js/jcomun.js"></script>
+	<script type="text/javascript" src="../js/jtabla.js"></script>
+	<script type="text/javascript" src="../js/jgoogle.js"></script>
+	<!-- <script type="text/javascript" src="../js/live.js"></script> -->
 	<script>
 		$(document).ready(function() {
-			pagina = "fnanual";
-			titulo = "MyFinan - Informe Anual";
+			pagina = "fnconsulta";
+			titulo = "MyFinan - Consulta";
 			ayuda = "http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=GTienda:Acerca_de";
-			inicioAnual();
+			inicioConsulta();
 		});
 	</script>
 </head>
 <body>
 <div id="mask" class="DN" onclick="cancelar();"> </div>
 <div id="mask2" class="DN mask" onclick="menuPop(0);"> </div>
-	
 <div class="section"><div class="container">
     <div class="fila" id="actualizarPanel">
         <div class="col2 menu-img">
-        	<span onclick="menuPop(1);"> </span>
+        	<span onclick="menuPop(1);"></span>
         </div>
         <div class="col2 brand2">
-            <img alt="myfinan" src="images/myfinanpeq.JPG" />
+            <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
         </div>
-        <div class="col2 year">
-        	Año: 
-        	<select id="year" onchange="seeYear();"> </select>
+        <div class="col2 date2">
+        	Desde 
+			<input type="text" id="desde"/>
         </div>
-        <div class="col2 welcome">
-            <label id="usuario"> </label>
+        <div class="col2 date2">
+        	Hasta 
+			<input type="text" id="hasta"/>
+        </div>
+        <div class="col2 input-select">
+        	Cuenta 
+        	<select id="cuenta"> </select>
+        </div>
+        <div class="col2 btn_play">
+        	<button onclick="ejecutar();">Ejecutar</button>
         </div>
     </div>
 </div></div>
-<hr class="hr-header"> 
+<hr class="hr-header">    
 <div class="section">
 	<div class="container">
 		<div class="fila">
-			<div class="col mo">
-				<table class="no-cell" id="cuentas"> </table>
-				<label class="yes-cell" id="errWindow">Pantalla muy pequeña, intente con el celular horizontalmente</label>
+			<div class="col mo box-shadow" style="margin: 5px;">
+				<table class="no-cell" id="consulta" > </table>
 			</div>
-	   	</div>
+			<label class="yes-cell" id="errWindow">Pantalla muy pequeña, intente con el celular horizontalmente</label>
+   		</div>
 	</div>
 </div>
-
 <div id="menu" class="config-menu">
 	<h2>Menu</h2>
 	<a class="btn-a v2" href="mov.html"><div><span>Movimientos</span></div></a>
-	<a class="btn-a v2" href="consulta.html"><div><span>Consulta</span></div></a>
+	<a class="btn-a v2" href="anual.html"><div><span>Anual</span></div></a>
 	<a class="btn-a v2" href="cuentas.html"><div><span>Cuentas</span></div></a>
 	<a class="btn-a v2" href="contacto.html"><div><span>Contacto</span></div></a>
 	<a class="btn-a v2" href="http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=Hotel" target="_blank" onclick="menuPop(0);"><div><span>Ayuda</span></div></a>
