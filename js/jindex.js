@@ -15,6 +15,7 @@ function verUsuario(datos)
 	if (datos) {
 		// document.cookie = "encabezado=" + encabezado;
 		localStorage.setItem("encabezado", encabezado);
+		localStorage.setItem("email", $("#emaillogin").val());
 		window.location.assign("mov.html");
 	}
 	else

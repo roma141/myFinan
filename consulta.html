@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="js/jcomun.js"></script>
 	<script type="text/javascript" src="js/jtabla.js"></script>
 	<script type="text/javascript" src="js/jgoogle.js"></script>
-	<!-- <script type="text/javascript" src="js/live.js"></script> -->
+	<script type="text/javascript" src="js/live.js"></script>
 	<script>
 		$(document).ready(function() {
 			pagina = "fnconsulta";
@@ -38,26 +38,26 @@
         	<span onclick="menuPop(1);"></span>
         </div>
         <div class="col2 brand2">
-            <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
+            <img alt="myfinan" src="images/brand-n-v2-small.JPG" />
         </div>
         <div class="col2 date2">
-        	Desde 
-					<input type="text" id="desde"/>
+        	From 
+			<input type="text" id="desde"/>
         </div>
         <div class="col2 date2">
-        	Hasta 
-					<input type="text" id="hasta"/>
+        	To 
+			<input type="text" id="hasta"/>
         </div>
         <div class="col2 input-select">
-        	Cuenta 
+        	Account 
         	<select id="cuenta"> </select>
         </div>
-        <div class="col2">
+        <div class="col2 input-tag">
         	Tags
-					<input type="text" id="tags"/>
+			<input type="text" id="tags"/>
         </div>
         <div class="col2 btn_play">
-        	<button onclick="ejecutar();">Ejecutar</button>
+        	<button onclick="ejecutar();">Go</button>
         </div>
     </div>
 </div></div>
@@ -68,18 +68,18 @@
 			<div class="col mo box-shadow" style="margin: 5px;">
 				<table class="no-cell" id="consulta" > </table>
 			</div>
-			<label class="yes-cell" id="errWindow">Pantalla muy pequeña, intente con el celular horizontalmente</label>
+			<label class="yes-cell" id="errWindow">Very small screen try horizontally or go to <a href="www.myfinan.com">www.myfinan.com</a> on desktop</label>
    		</div>
 	</div>
 </div>
 <div id="menu" class="config-menu">
 	<h2>Menu</h2>
-	<a class="btn-a v2" href="mov.html"><div><span>Movimientos</span></div></a>
-	<a class="btn-a v2" href="anual.html"><div><span>Anual</span></div></a>
-	<a class="btn-a v2" href="cuentas.html"><div><span>Cuentas</span></div></a>
-	<a class="btn-a v2" href="contacto.html"><div><span>Contacto</span></div></a>
-	<a class="btn-a v2" href="http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=Hotel" target="_blank" onclick="menuPop(0);"><div><span>Ayuda</span></div></a>
-	<a class="btn-a v2" href="#" onclick="logout();"><div><span>Salir</span></div></a>
+	<a class="btn-a v2" href="mov.html"><div><span>New Entry</span></div></a>
+	<a class="btn-a v2" href="anual.html"><div><span>By year</span></div></a>
+	<a class="btn-a v2" href="cuentas.html"><div><span>Settings</span></div></a>
+	<a class="btn-a v2" href="contacto.html"><div><span>Contact</span></div></a>
+	<a class="btn-a v2" href="ayudamov.html" target="_blank" onclick="menuPop(0);"><div><span>Help</span></div></a>
+	<a class="btn-a v2" href="#" onclick="logout();"><div><span>Log out</span></div></a>
 </div>
 </body>
 </html>

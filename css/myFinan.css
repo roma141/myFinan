@@ -16,11 +16,20 @@ input {
 	padding: 23px;
 }
 .input-select {
-    width: 230px;
-    padding: 6px;
+    width: 221px;
+    padding: 6px 0px 6px 6px;
 }
 .input-select select {
     padding: 6px;
+}
+.input-tag {
+    width: 181px;
+    padding: 6px 0px 6px 6px;
+}
+.input-tag input {
+    width: 167px;
+    height: 28px;
+    padding: 0px 6px 0px 6px;
 }
 .a-info {
     width: 100%;
@@ -341,6 +350,12 @@ input {
 .yes-cell {
     display: none;
 }
+.yes-table {
+    display: none;
+}
+.yes-labtop {
+    display: none;
+}
 .footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
@@ -365,9 +380,8 @@ input {
 }
 .date2 {
     font-family: Arial, Helvetica, sans-serif;
-    width: 100px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    width: 94px;
+    padding: 7px 0px 7px 6px;
 }
 .date2 input {
     width: 80px;
@@ -381,8 +395,7 @@ input {
 }
 .btn_play {
     width: 80px;
-    padding-top: 28px;
-    padding-bottom: 15px;
+    padding: 28px 0px 15px 6px;
 }
 .welcome {
     width: 300px;
@@ -403,6 +416,16 @@ input {
 @media (max-width: 1050px) {
     .idx-left {
         width: 60%;
+    }
+    .no-labtop {
+        display: none;
+    }
+    .yes-labtop {
+        display: inherit;
+    }
+    .adding-box {
+        margin-top: 0;
+        margin-bottom: 0; 
     }
 }
 @media (max-width: 947px) {
@@ -459,30 +482,42 @@ input {
     .inOut th:nth-of-type(5) {
         width: 5px;
     }
+    .menu-img {
+        padding: 10px 3px 0 5px;
+    }
+    .brand2 {
+        margin: 0 -15px 0 -5px;
+    }
+    .brand2 img {
+        width: 90%;
+        margin: 7px 0 -14px 0;
+    }
 }
-@media (max-width: 435px) {
-    .brand img {
-        width: 70%;
+@media (max-width: 750px) {
+    .section {
+        padding: 0 5px 0 5px;
     }
-    .year {
-    	padding: 12px;
+    .date2 {
+        width: 80px;
+        padding: 4px 3px 0px 0px;
     }
-    .titulo {
-        height: 14px;
+    .date2 input {
+        font-size: 12px;
+        width: 70px;
+        padding: 2px 2px;
     }
-    .adding-box {
-        width: auto;
-        margin: 0 0 0 0;
-        padding: 0;
+    .input-select {
+        width: 217px;
+        padding: 0px;
     }
-    .adding-box td:nth-of-type(2) {
-        display: initial;
+    .input-select select {
+        width: 211px;
     }
-    .acount,
-    .inOut {
-        width: 410px;
-        margin: 5px;
+    .input-tag {
+        padding: 0px;
     }
+}
+@media (max-width: 614px) {
     .acount th:nth-of-type(1) {
         width: auto;
     }
@@ -500,6 +535,37 @@ input {
     }
     .acount th:nth-of-type(5) {
         width: auto;
+    }
+    .adding-box {
+        width: auto;
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+    .adding-box td:nth-of-type(2) {
+        display: initial;
+    }
+    .no-table {
+        display: none;
+    }
+    .yes-table {
+        display: inherit;
+    }
+
+}
+@media (max-width: 435px) {
+    .brand img {
+        width: 70%;
+    }
+    .year {
+    	padding: 12px;
+    }
+    .titulo {
+        height: 14px;
+    }
+    .acount,
+    .inOut {
+        width: 410px;
+        margin: 5px;
     }
     .inOut th:nth-of-type(1),
     .inOut td:nth-of-type(1) {
@@ -524,16 +590,6 @@ input {
     .inOut input {
         font-size: 14px;
     }
-    .menu-img {
-        padding: 10px 3px 0 5px;
-    }
-    .brand2 {
-        margin: 0 -15px 0 -5px;
-    }
-    .brand2 img {
-        width: 90%;
-        margin: 7px 0 -14px 0;
-    }
     .date {
         width: 80px;
         padding: 4px 9px 0 0;
@@ -542,22 +598,6 @@ input {
         font-size: 12px;
         width: 70px;
         padding: 8px 8px;
-    }
-    .date2 {
-        width: 80px;
-        padding: 4px 0px 0 0;
-    }
-    .date2 input {
-        font-size: 12px;
-        width: 70px;
-        padding: 2px 2px;
-    }
-    .input-select {
-    	width: 225px;
-    	padding: 0px;
-    }
-    .input-select select {
-    	width: 211px;
     }
     .btn_save {
         width: 60px;

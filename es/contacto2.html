@@ -20,13 +20,14 @@
     <script type="text/javascript" src="../js/japiFinan.js"></script>
     <script type="text/javascript" src="../js/jcomun.js"></script>
     <script type="text/javascript" src="../js/jgoogle.js"></script>
+    <script type="text/javascript" src="../js/jcontact.js"></script>
     <script type="text/javascript" src="../js/live.js"></script>
     <script>
         $(document).ready(function() {
-            pagina = "fnmov";
-            titulo = "MyFinan - Movimientos";
+            pagina = "fncontact";
+            titulo = "MyFinan - Contacto";
             ayuda = "http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=GTienda:Acerca_de";
-            inicioMov();
+            inicioContact();
         });
     </script>
     <style type="text/css">
@@ -42,26 +43,32 @@
     </style>
 </head>
 <body>
+<div class="section">
+    <div class="container">
+        <div class="fila">
+            <div class="col2 menu-img">
+                <span onclick="menuPop(1);"></span>
+            </div>
+            <div class="col2 brand2">
+                <img alt="myfinan" src="../images/brand-n-v2-small.JPG" />
+            </div>
+            <div class="col2 date">
+                <input type="text" id="fecha" onchange="refrescar();"/>
+            </div>
+            <div class="col2 btn_save">
+                <button onclick="actualizar();">Guardar</button>
+            </div>
+            <div class="col2 welcome">
+                <label id="usuario">Bienvenido(a)</label>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
     <form id="form1" runat="server">
     <div>
-    
         <table class="style1">
-            <tr>
-                <td>
-                    <img alt="MyFinan" src="images/myFinan%20Azul.JPG" style="width: 353px; height: 100px" />
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr />
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
             <tr>
                 <td>
                     <table class="style1">
@@ -88,7 +95,7 @@
                         <tr>
                             <td class="style2">&nbsp;</td>
                             <td>
-                                <textarea id="email" style="width:400px"></textarea>
+                                <input id="email" style="width:400px"></input>
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -117,7 +124,7 @@
                         <tr>
                             <td style="text-align: center" class="style2">&nbsp;</td>
                             <td style="text-align: center">
-                                <input id="enviar" value="Enviar" type="button" onclick="enviar()" />
+                                <button id="enviar" value="Enviar" type="button" onclick="enviar()">Enviar</button>
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -133,5 +140,15 @@
     
     </div>
     </form>
+<div id="menu" class="config-menu">
+    <h2>Menu</h2>
+    <a class="btn-a v2" href="mov.html"><div><span>Movimientos</span></div></a>
+    <a class="btn-a v2" href="consulta.html"><div><span>Consulta</span></div></a>
+    <a class="btn-a v2" href="anual.html"><div><span>Anual</span></div></a>
+    <a class="btn-a v2" href="cuentas.html"><div><span>Cuentas</span></div></a>
+    <a class="btn-a v2" href="contacto2.html"><div><span>Contacto</span></div></a>
+    <a class="btn-a v2" href="ayudamov.html" target="_blank" onclick="menuPop(0);"><div><span>Ayuda</span></div></a>
+    <a class="btn-a v2" href="#" onclick="logout();"><div><span>Salir</span></div></a>
+</div>
 </body>
 </html>

@@ -58,12 +58,23 @@ function armaCuadro(datos)
 
     response = {};
     titulos = [];
-    titulos.push({"titulo":"Fecha", "ancho":90, "alinea":"center", "campo":"fecha"});
-    titulos.push({"titulo":"Concepto", "ancho":300, "alinea":"left", "campo":"concepto"});
-    titulos.push({"titulo":"Entradas", "ancho":70, "alinea":"right", "campo":"entrada"});
-    titulos.push({"titulo":"Salidas", "ancho":70, "alinea":"right", "campo":"salida"});
-    titulos.push({"titulo":"Saldo", "ancho":70, "alinea":"right", "campo":"saldo"});
-    titulos.push({"titulo":"Contra", "ancho":160, "alinea":"left", "campo":"contra"});
+    var userLang = navigator.language || navigator.userLanguage; 
+	if (userLang.indexOf("es") >= 0) {
+	    titulos.push({"titulo":"Fecha", "ancho":90, "alinea":"center", "campo":"fecha"});
+	    titulos.push({"titulo":"Concepto", "ancho":300, "alinea":"left", "campo":"concepto"});
+	    titulos.push({"titulo":"Entradas", "ancho":70, "alinea":"right", "campo":"entrada"});
+	    titulos.push({"titulo":"Salidas", "ancho":70, "alinea":"right", "campo":"salida"});
+	    titulos.push({"titulo":"Saldo", "ancho":70, "alinea":"right", "campo":"saldo"});
+	    titulos.push({"titulo":"Contra", "ancho":160, "alinea":"left", "campo":"contra"});
+	}
+	else {
+	    titulos.push({"titulo":"Date", "ancho":90, "alinea":"center", "campo":"fecha"});
+	    titulos.push({"titulo":"Description", "ancho":300, "alinea":"left", "campo":"concepto"});
+	    titulos.push({"titulo":"In", "ancho":70, "alinea":"right", "campo":"entrada"});
+	    titulos.push({"titulo":"Out", "ancho":70, "alinea":"right", "campo":"salida"});
+	    titulos.push({"titulo":"Balance", "ancho":70, "alinea":"right", "campo":"saldo"});
+	    titulos.push({"titulo":"Account", "ancho":160, "alinea":"left", "campo":"contra"});
+	}
     response["datos"] = datos;
     response["titulos"] = titulos;
     response["totales"] = [];
