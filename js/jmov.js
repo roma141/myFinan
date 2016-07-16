@@ -31,7 +31,13 @@ function dibujaCuentas(datos)
 		window.location.assign("index.html");		
 	}
 	gdatos = datos;
-	$('#usuario').html("Bienvenido " + gdatos.usuario.nombre);
+	var userLang = navigator.language || navigator.userLanguage; 
+	if (userLang.indexOf("es") >= 0) {
+		$('#usuario').html("Bienvenido " + gdatos.usuario.nombre);
+	}
+	else {
+		$('#usuario').html("Welcome " + gdatos.usuario.nombre);
+	}
 	dibujaCuadroCuentas();
 	/*$('#cuentas').html( cadTabla(datos, "cuentas", "leeEntradasySalidas"));*/
 	llenaSelector(gdatos.datos, "cuentaOrigen");
@@ -180,11 +186,22 @@ function modificar(IDmov)
 function dibujaCuadroCuentas()
 {
 	var titulos = [];
-    titulos.push({"titulo":"Cuenta", "ancho":200, "alinea":"left", "campo":"nombre"});
-    titulos.push({"titulo":"Saldo Anterior", "ancho":160, "alinea":"right", "campo":"saldoant"});
-    titulos.push({"titulo":"Entradas", "ancho":100, "alinea":"right", "campo":"entradas"});
-    titulos.push({"titulo":"Salidas", "ancho":100, "alinea":"right", "campo":"salidas"});
-    titulos.push({"titulo":"Saldo", "ancho":100, "alinea":"right", "campo":"saldo"});
+	var userLang = navigator.language || navigator.userLanguage; 
+	if (userLang.indexOf("es") >= 0) {
+       	titulos.push({"titulo":"Cuenta", "ancho":200, "alinea":"left", "campo":"nombre"});
+	    titulos.push({"titulo":"Saldo Anterior", "ancho":160, "alinea":"right", "campo":"saldoant"});
+	    titulos.push({"titulo":"Entradas", "ancho":100, "alinea":"right", "campo":"entradas"});
+	    titulos.push({"titulo":"Salidas", "ancho":100, "alinea":"right", "campo":"salidas"});
+	    titulos.push({"titulo":"Saldo", "ancho":100, "alinea":"right", "campo":"saldo"});
+	}
+	else {
+		titulos.push({"titulo":"Account", "ancho":200, "alinea":"left", "campo":"nombre"});
+	    titulos.push({"titulo":"Previous balance", "ancho":160, "alinea":"right", "campo":"saldoant"});
+	    titulos.push({"titulo":"In", "ancho":100, "alinea":"right", "campo":"entradas"});
+	    titulos.push({"titulo":"Out", "ancho":100, "alinea":"right", "campo":"salidas"});
+	    titulos.push({"titulo":"Balance", "ancho":100, "alinea":"right", "campo":"saldo"});
+	}
+    
 	
 	var datos = {};
 	datos["titulos"] = titulos;
@@ -197,13 +214,24 @@ function dibujaCuadroCuentas()
 function dibujaCuadroEntradas()
 {
 	var titulos = [];
-    titulos.push({"titulo":"Fecha", "ancho":110, "alinea":"center", "campo":"fecha", "input":"normal", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Concepto", "ancho":300, "alinea":"left", "campo":"concepto", "input":"normal", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Valor", "ancho":70, "alinea":"right", "campo":"valorf", "input":"normal", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Us", "ancho":20, "alinea":"left", "campo":"nombrecorto"});
-    titulos.push({"titulo":"Contra", "ancho":160, "alinea":"left", "campo":"contra", "input":"select", "datos": gdatos.datos, "funcioninput":"anotar"});
-    titulos.push({"titulo":"", "ancho":70, "alinea":"left", "campo":"eliminar", "linktext": "#", "link": "", "funcion":"funcion"});
+	var userLang = navigator.language || navigator.userLanguage; 
+	if (userLang.indexOf("es") >= 0) {
+	    titulos.push({"titulo":"Fecha", "ancho":110, "alinea":"center", "campo":"fecha", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Concepto", "ancho":300, "alinea":"left", "campo":"concepto", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Valor", "ancho":70, "alinea":"right", "campo":"valorf", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Us", "ancho":20, "alinea":"left", "campo":"nombrecorto"});
+	    titulos.push({"titulo":"Contra", "ancho":160, "alinea":"left", "campo":"contra", "input":"select", "datos": gdatos.datos, "funcioninput":"anotar"});
+	    titulos.push({"titulo":"", "ancho":70, "alinea":"left", "campo":"eliminar", "linktext": "#", "link": "", "funcion":"funcion"});
+	}
+	else {
+	    titulos.push({"titulo":"Date", "ancho":110, "alinea":"center", "campo":"fecha", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"About", "ancho":300, "alinea":"left", "campo":"concepto", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Value", "ancho":70, "alinea":"right", "campo":"valorf", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"", "ancho":20, "alinea":"left", "campo":"nombrecorto"});
+	    titulos.push({"titulo":"From", "ancho":160, "alinea":"left", "campo":"contra", "input":"select", "datos": gdatos.datos, "funcioninput":"anotar"});
+	    titulos.push({"titulo":"", "ancho":70, "alinea":"left", "campo":"eliminar", "linktext": "#", "link": "", "funcion":"funcion"});
 
+	}
 	$.each(gdatos.datos, function(i,item) {
 		if (item.borrable==1) {
 			item["eliminar"] = "X";
@@ -224,12 +252,23 @@ function dibujaCuadroEntradas()
 function dibujaCuadroSalidas()
 {
 	var titulos = [];
-    titulos.push({"titulo":"Fecha", "ancho":110, "alinea":"center", "campo":"fechas", "input":"normal", "funcioninput":"anotars"});
-    titulos.push({"titulo":"Concepto", "ancho":300, "alinea":"left", "campo":"conceptos", "input":"normal", "funcioninput":"anotars"});
-    titulos.push({"titulo":"Valor", "ancho":70, "alinea":"right", "campo":"valorfs", "input":"normal", "funcioninput":"anotars"});
-    titulos.push({"titulo":"Us", "ancho":20, "alinea":"left", "campo":"nombrecortos"});
-    titulos.push({"titulo":"Contra", "ancho":160, "alinea":"left", "campo":"contras", "input":"select", "datos": gdatos.datos, "funcioninput":"anotars"});
-    titulos.push({"titulo":"", "ancho":70, "alinea":"left", "campo":"eliminars", "linktext": "#", "link": "", "funcion":"funcion"});
+	var userLang = navigator.language || navigator.userLanguage; 
+	if (userLang.indexOf("es") >= 0) {
+	    titulos.push({"titulo":"Fecha", "ancho":110, "alinea":"center", "campo":"fechas", "input":"normal", "funcioninput":"anotars"});
+	    titulos.push({"titulo":"Concepto", "ancho":300, "alinea":"left", "campo":"conceptos", "input":"normal", "funcioninput":"anotars"});
+	    titulos.push({"titulo":"Valor", "ancho":70, "alinea":"right", "campo":"valorfs", "input":"normal", "funcioninput":"anotars"});
+	    titulos.push({"titulo":"Us", "ancho":20, "alinea":"left", "campo":"nombrecortos"});
+	    titulos.push({"titulo":"Contra", "ancho":160, "alinea":"left", "campo":"contras", "input":"select", "datos": gdatos.datos, "funcioninput":"anotars"});
+	    titulos.push({"titulo":"", "ancho":70, "alinea":"left", "campo":"eliminars", "linktext": "#", "link": "", "funcion":"funcion"});
+	}
+	else {
+	    titulos.push({"titulo":"Date", "ancho":110, "alinea":"center", "campo":"fechas", "input":"normal", "funcioninput":"anotars"});
+	    titulos.push({"titulo":"About", "ancho":300, "alinea":"left", "campo":"conceptos", "input":"normal", "funcioninput":"anotars"});
+	    titulos.push({"titulo":"Value", "ancho":70, "alinea":"right", "campo":"valorfs", "input":"normal", "funcioninput":"anotars"});
+	    titulos.push({"titulo":"", "ancho":20, "alinea":"left", "campo":"nombrecortos"});
+	    titulos.push({"titulo":"Go<span>&nbsp;</span>to", "ancho":160, "alinea":"left", "campo":"contras", "input":"select", "datos": gdatos.datos, "funcioninput":"anotars"});
+	    titulos.push({"titulo":"", "ancho":70, "alinea":"left", "campo":"eliminars", "linktext": "#", "link": "", "funcion":"funcion"});
+	}
 
 	$.each(gdatos.datos, function(i,item) {
 		if (item.borrable==1) {

@@ -43,14 +43,14 @@
         <div class="col2 menu-img">
         	<span onclick="menuPop(1);"></span>
         </div>
-        <div class="col2 brand2">
-            <img alt="www.myfinan.com" src="images/myfinanpeq.JPG" />
+        <div class="col2 brand2" onclick="menuPop(1);">
+            <img alt="www.myfinan.com" src="images/brand-n-v2-small.JPG" />
         </div>
         <div class="col2 date">
 			<input type="text" id="fecha" style="width: 80px; border-style: none"/>
         </div>
         <div class="col2 btn_save">
-        	<button onclick="actualizar();">Actualizar</button>
+        	<button onclick="actualizar();">Save</button>
         </div>
         <div class="col2 welcome">
             <label id="usuario"> </label>
@@ -63,16 +63,16 @@
 		<div class="col mo">
 			<table class="no-cell" id="cuentas" > </table>
 		</div>
-		<label class="yes-cell" id="errWindow">Pantalla muy pequeña, intente con el celular horizontalmente</label>
+		<label class="yes-cell" id="errWindow">Very small screen try horizontally or go to <a href="www.myfinan.com">www.myfinan.com</a> on desktop</label>
         <div class="col" style="margin: 20px;">
         	<!--div style="margin-top: 15%;margin-bottom: 15%;margin-left: 42%;border:3px solid #E8E8E8;padding: 4px;width: 325px;"-->
         	<div class="mo box-shadow no-cell" style="width: 280px;padding: 6px;">
 	            <table>
 	                <tr>
-	                    <td class="titulo" colspan="2">Nueva Cuenta</td>
+	                    <td class="titulo" colspan="2">New Account</td>
 	                </tr>
 	                <tr>
-	                    <td class="">Nombre</td>
+	                    <td class="">Name</td>
 	                    <td><input id="nombre" style="margin-left: 0px; width:223px;height: 30px;"/></td>
 	                </tr>
 <!--	                <tr>
@@ -99,7 +99,7 @@
 	                <tr>
 	                    <td class="">&nbsp;</td>
 	                    <td style="text-align: right">
-	                        <br><button onclick="agregar();">Agregar</button>
+	                        <br><button onclick="agregar();">Add</button>
 	                    </td>
 	                </tr>
 	            </table>
@@ -111,12 +111,12 @@
 
 <div id="menu" class="config-menu">
 	<h2>Menu</h2>
-	<a class="btn-a v2" href="mov.html"><div><span>Movimientos</span></div></a>
-	<a class="btn-a v2" href="consulta.html"><div><span>Consulta</span></div></a>
-	<a class="btn-a v2" href="anual.html"><div><span>Anual</span></div></a>
-	<a class="btn-a v2" href="contacto.html"><div><span>Contacto</span></div></a>
-	<a class="btn-a v2" href="http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=Hotel" target="_blank" onclick="menuPop(0);"><div><span>Ayuda</span></div></a>
-	<a class="btn-a v2" href="#" onclick="logout();"><div><span>Salir</span></div></a>
+	<a class="btn-a v2" href="mov.html"><div><span>New Entry</span></div></a>
+	<a class="btn-a v2" href="consulta.html"><div><span>By account</span></div></a>
+	<a class="btn-a v2" href="anual.html"><div><span>By year</span></div></a>
+	<a class="btn-a v2" href="contacto.html"><div><span>Contact</span></div></a>
+	<a class="btn-a v2" href="http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=Hotel" target="_blank" onclick="menuPop(0);"><div><span>Help</span></div></a>
+	<a class="btn-a v2" href="#" onclick="logout();"><div><span>Log out</span></div></a>
 </div>
 </body>
 </html>

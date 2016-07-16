@@ -9,6 +9,9 @@ input {
     border: 1px solid #b4b4b4;
     background-color: #f9f9f9;
 }
+.img-center-firefox {
+    text-align: center;
+}
 .year {
 	padding: 23px;
 }
@@ -104,7 +107,7 @@ input {
 }
 .brand2 img {
     width: 100%;
-    margin: 7px 0 7px 0;
+    margin: 7px 7px 7px 7px;
 }
 .login {
     padding-top: 40px;
@@ -397,7 +400,12 @@ input {
 #valor {
     width: 100%;
 }
-@media (max-width: 769px) {
+@media (max-width: 1050px) {
+    .idx-left {
+        width: 60%;
+    }
+}
+@media (max-width: 947px) {
     .login {
         padding-top: 0;
     }
@@ -412,6 +420,9 @@ input {
     }
     .singup-pad {
         padding: 0 30% 0 30%;
+    }
+    .idx-left {
+        width: 100%;
     }
     .idx-left img {
         width: 80%;
@@ -510,19 +521,18 @@ input {
     .inOut select {
         width: 160px;
     }
-    .inOut input,
-    select {
+    .inOut input {
         font-size: 14px;
     }
     .menu-img {
         padding: 10px 3px 0 5px;
     }
     .brand2 {
-        margin: 0 -15px 0 -15px;
+        margin: 0 -15px 0 -5px;
     }
     .brand2 img {
         width: 90%;
-        margin: 0 0 -14px 0;
+        margin: 7px 0 -14px 0;
     }
     .date {
         width: 80px;

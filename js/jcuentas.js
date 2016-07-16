@@ -36,14 +36,27 @@ function dibujaCuentas(datos)
 function dibujaCuadro()
 {
 	var titulos = [];
-    titulos.push({"titulo":"Nombre de la Cuenta", "ancho":300, "alinea":"left", "campo":"nombre", "input":"normal", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Saldo Inicial", "ancho":60, "alinea":"rigth", "campo":"saldo", "input":"normal", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Fecha Saldo", "ancho":100, "alinea":"center", "campo":"fechasaldo", "input":"normal", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Pasa Saldo", "ancho":70, "alinea":"center", "campo":"esContinua", "input":"", "funcioninput":"anotar", "aviso": "el saldo se pasa entre meses"});
-    titulos.push({"titulo":"Es Gasto", "ancho":60, "alinea":"center", "campo":"esgasto", "input":"", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Activo", "ancho":60, "alinea":"center", "campo":"activo", "input":"", "funcioninput":"anotar"});
-    titulos.push({"titulo":"Orden", "ancho":40, "alinea":"rigth", "campo":"orden", "input":"normal", "funcioninput":"anotar"});
-    titulos.push({"titulo":"", "ancho":10, "alinea":"left", "campo":"eliminar", "linktext": "#", "link": "", "funcion":"funcion", "aviso": "eliminar"});
+	var userLang = navigator.language || navigator.userLanguage; 
+	if (userLang.indexOf("es") >= 0) {
+	    titulos.push({"titulo":"Nombre de la Cuenta", "ancho":300, "alinea":"left", "campo":"nombre", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Saldo Inicial", "ancho":60, "alinea":"rigth", "campo":"saldo", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Fecha Saldo", "ancho":100, "alinea":"center", "campo":"fechasaldo", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Pasa Saldo", "ancho":70, "alinea":"center", "campo":"esContinua", "input":"", "funcioninput":"anotar", "aviso": "el saldo se pasa entre meses"});
+	    titulos.push({"titulo":"Es Gasto", "ancho":60, "alinea":"center", "campo":"esgasto", "input":"", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Activo", "ancho":60, "alinea":"center", "campo":"activo", "input":"", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Orden", "ancho":40, "alinea":"rigth", "campo":"orden", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"", "ancho":10, "alinea":"left", "campo":"eliminar", "linktext": "#", "link": "", "funcion":"funcion", "aviso": "eliminar"});
+	}
+	else {
+	    titulos.push({"titulo":"Account name", "ancho":300, "alinea":"left", "campo":"nombre", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Opening balance", "ancho":60, "alinea":"rigth", "campo":"saldo", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Balance day", "ancho":100, "alinea":"center", "campo":"fechasaldo", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Keep balance", "ancho":70, "alinea":"center", "campo":"esContinua", "input":"", "funcioninput":"anotar", "aviso": "el saldo se pasa entre meses"});
+	    titulos.push({"titulo":"It's Expense", "ancho":60, "alinea":"center", "campo":"esgasto", "input":"", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Show", "ancho":60, "alinea":"center", "campo":"activo", "input":"", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"Order", "ancho":40, "alinea":"rigth", "campo":"orden", "input":"normal", "funcioninput":"anotar"});
+	    titulos.push({"titulo":"", "ancho":10, "alinea":"left", "campo":"eliminar", "linktext": "#", "link": "", "funcion":"funcion", "aviso": "eliminar"});
+	}
 	
 	$.each(gdatos.datos, function(i,item) {
 		if (item.borrable==1) {
