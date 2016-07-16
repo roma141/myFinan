@@ -34,7 +34,7 @@ function dibujaConsulta(datos)
 
 function ejecutar()
 {
-	MovimientosF($("#cuenta").val(), new Date($("#desde").val()), new Date($("#hasta").val()), dibujaConsulta);
+	MovimientosF($("#cuenta").val(), new Date($("#desde").val()), new Date($("#hasta").val()), $("#tags").val(), dibujaConsulta);
 }
 
 function armaCuadro(datos)
