@@ -9,6 +9,11 @@ input {
     border: 1px solid #b4b4b4;
     background-color: #f9f9f9;
 }
+.section.gray {
+    background-color: #f5f6f7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .img-center-firefox {
     text-align: center;
 }
@@ -151,6 +156,12 @@ input {
 }
 .config-menu.out {
     left: 0;
+}
+.hor-menu {
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    background-color: white;
 }
 .section {
     padding-right: 60px;
