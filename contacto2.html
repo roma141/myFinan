@@ -1,110 +1,83 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .style1
-        {
-            width: 100%;
-            font-family:Arial;
-        }
-        .style2
-        {
-            width: 41px;
-        }
-    </style>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>MyFinan - Contacto</title>
+    <meta name="description" content="Para hablar con nosotros directamente atraves de email, pagina de contacto" />
+    <meta name="author" content="Botpi" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/myFinan.css">
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/japiFinan.js"></script>
+    <script type="text/javascript" src="../js/jcomun.js"></script>
+    <script type="text/javascript" src="../js/jgoogle.js"></script>
+    <script type="text/javascript" src="../js/jcontact.js"></script>
+    <script type="text/javascript" src="../js/live.js"></script>
+    <script>
+        $(document).ready(function() {
+            pagina = "fncontact2";
+            titulo = "MyFinan - Contacto";
+            ayuda = "http://gtienda.com/wiki/mediawiki-1.23.5/index.php?title=GTienda:Acerca_de";
+            inicioContact();
+        });
+    </script>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-    
-        <table class="style1">
-            <tr>
-                <td>
-                    <img alt="MyFinan" src="images/myFinan%20Azul.JPG" style="width: 353px; height: 100px" />
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr />
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <table class="style1">
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>Si quieres saber más o darnos una sugerencia o hacer algún comentario...</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>email:</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>
-                                <textarea id="email" style="width:400px"></textarea>
-                            </td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>Comentario</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>
-                                <textarea id="comentario" style="height:151px; width:703px"></textarea>
-                            </td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td class="style2">&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center" class="style2">&nbsp;</td>
-                            <td style="text-align: center">
-                                <input id="enviar" value="Enviar" type="button" onclick="enviar()" />
-                            </td>
-                            <td>&nbsp;</td>
-                        </tr>
-                    </table>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-    
+<div id="mask" class="DN" onclick="cancelar();"> </div>
+<div id="mask2" class="DN mask" onclick="menuPop(0);"> </div>
+<div class="section">
+    <div class="container">
+        <div class="fila">
+            <div class="col2 menu-img">
+                <span onclick="menuPop(1);"></span>
+            </div>
+            <div class="col2 brand2">
+                <img alt="myfinan" src="../images/brand-n-v2-small.JPG" />
+            </div>
+            <div class="col2 date">
+                <input type="text" id="fecha" onchange="refrescar();"/>
+            </div>
+            <div class="col2 welcome">
+                <label id="usuario">Bienvenido(a)</label>
+            </div>
+        </div>
     </div>
-    </form>
+</div>
+<div class="section">
+<div class="container">
+    <div>
+        Si quieres saber más o darnos una sugerencia o hacer algún comentario...
+        <br><br>
+    </div>
+    <div>
+        <input id="email" placeholder="Tu email" style="width:300px"></input>
+    </div>
+    <div>
+        <textarea id="comentario" placeholder="Que deseas decirnos?" style="height:151px; width:100%;"></textarea>
+    </div>
+    <div>
+        <button id="enviar" value="Enviar" type="button" onclick="enviar()">Enviar</button>
+    </div>
+</div>
+</div>
+
+<div id="menu" class="config-menu">
+    <h2>Menu</h2>
+    <a class="btn-a v2" href="mov.html"><div><span>Movimientos</span></div></a>
+    <a class="btn-a v2" href="consulta.html"><div><span>Consulta</span></div></a>
+    <a class="btn-a v2" href="anual.html"><div><span>Anual</span></div></a>
+    <a class="btn-a v2" href="cuentas.html"><div><span>Cuentas</span></div></a>
+    <a class="btn-a v2" href="ayudamov.html" target="_blank" onclick="menuPop(0);"><div><span>Ayuda</span></div></a>
+    <a class="btn-a v2" href="#" onclick="logout();"><div><span>Salir</span></div></a>
+</div>
 </body>
 </html>

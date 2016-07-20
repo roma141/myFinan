@@ -1,329 +1,144 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
-<head runat="server">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>MyFinan - Ayuda</title>
+    <meta name="description" content="Para hablar con nosotros directamente atraves de email, pagina de contacto" />
+    <meta name="author" content="Botpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/myFinan.css">
-    <style type="text/css">
-        .style1
-        {
-        	font-family:Arial;
-            width: 100%;
-        }
-        .style2
-        {
-        	border-width: thick;
-        }
-        .style3
-        {
-            height: 18px;
-        }
-        .style4
-        {
-            height: 88px;
-        }
-    </style>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-204913-2']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jgoogle.js"></script>
+    <script type="text/javascript" src="js/live.js"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
+<div class="section">
+<div class="container">
+    <div class="fila" style="width: 100%;">
+        <div class="col2 brand2">
+            <img alt="myfinan" src="images/brand-n-v2-small.JPG" />
+        </div>
+        <div class="col-right hor-menu">
+                <a class="col btn-a" href="index.html"><div><span>Home</span></div></a>
+                <a class="col btn-a" href="contacto.html"><div><span>Contact</span></div></a>
+                <a class="col btn-a" href="index.html"><div><span>Sign up</span></div></a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="section blue">
+<div class="container">
+    <h1>Help for New Entry</h1>
+</div>
+</div>
+<div class="section">
+<div class="container">
+    <div><br>
+        We recommend reading <a href="ayudaconcepto.html">myfinan concepts</a> before proceeding
+        <br><br>
+        The process is simple, write down all your money incomings and expenses. From where
+        and where it goes.<br />
+        <br />
+        At the beginning we recommend using accounts created by MyFinan, after
+        You can add, remove and modify.<br /><br>
+        <img alt="movimientos" src="images/ayudamov-v2-1.JPG" style="width: 100%;" />
+    </div>
+</div>
+</div>
+<div class="section gray">
+<div class="container">
+    <h3>INCOMINGS</h3>
     <div>
-    
-        <table class="style1">
-            <tr>
-                <td>
-                    <img alt="MyFinan" src="images/myFinan%20Azul.JPG" 
-                        style="width: 353px; height: 100px" /></td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <b>
-                    <br />
-                    AYUDA PARA EL INGRESO DE MOVIMIENTOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; </b>
-                    <asp:LinkButton ID="ayudaConceptosLinkButton" runat="server" 
-                        style="font-weight: 700" onclick="ayudaConceptosLinkButton_Click">Recordar Conceptos</asp:LinkButton>
-                    <br />
-                    <br />
-                    El proceso es sencillo, anotar todos los movimientos de tu dinero. De donde sale 
-                    y para donde va.<br />
-                    <br />
-                    Al comenzar te recomendamos utilizar las cuentas creadas por MyFinan, despues 
-                    las podrás agregar o quitar y modificar.<br />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <img alt="movimientos" src="images/ayudamov.JPG" 
-                        style="width: 1152px; height: 463px" /></td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <br />
-                    A continuación te mostraremos 3 movimientos comunes.
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr class="style2" />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <b>
-                    <br />
-                    <br />
-                    <br />
-                    SUELDO</b><br />
-                    El dinero viene de otra parte. Por lo general de la empresa en donde se trabaja. 
-                    Esta cuenta la llamamos Ingresos<br />
-                    Y va para el banco o para el bolsillo (Efectivo).<br />
-                    En este ejemplo recibimos el pago del sueldo en efectivo.</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <img alt="sueldo" src="images/sueldo.JPG" 
-                        style="width: 1115px; height: 349px" /></td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr class="style2" />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <br />
-                    <br />
-                    <br />
-                    <b>MERCADO</b><br />
-                    Vamos a pagar la carne en efectivo<br />
-                    Sale del Efectivo y va para Mercado</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <img alt="mercado" src="images/carne.JPG" 
-                        style="width: 1100px; height: 354px" /></td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr class="style2" />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <br />
-                    <br />
-                    <br />
-                    <b>COMPRA DE UN TELEVISOR</b><br />
-                    Vamos a pagarlo con la tarjeta de crédito<br />
-                    Sale de la Tarjeta de Crédito y va para Gastos Extras (es un gasto ocasional)</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <img alt="tv" src="images/tv.JPG" style="width: 1088px; height: 355px" /></td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr class="style2" />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <br />
-                    <br />
-                    <b>RESUMEN</b><br />
-                    Te hemos mostrado los movimientos por aparte para que puedas apreciar como 
-                    afectan a las cuentas<br />
-                    Ahora te mostraremos como queda MyFinan después de hacer los 3 movimientos</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <img alt="todo3" src="images/todo3.JPG" style="width: 1094px; height: 383px" /></td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr class="style2" />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <br />
-                    <br />
-                    <br />
-                    <b>PAGO DE LA TARJETA DE CREDITO</b><br />
-                    Por lo general la tarjeta de crédito se paga el siguiente mes, aquí vamos a 
-                    pagarla el mismo mes para poder apreciar lo que pasa.<br />
-                    Vamos a pagarla con el efectivo que tenemos<br />
-                    Sale de Efectivo y va para Tarjeta de Crédito</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <img alt="todo4" src="images/todo4.JPG" style="width: 1173px; height: 394px" /></td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <hr class="style2" />
-                </td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    <br />
-                    <br />
-                    <b>PARA TENER EN CUENTA</b><br />
-                    <br />
-                    MyFinan totaliza por mes. La fecha indicada define el mes y también la fecha del 
-                    movimiento ingresado.<br />
-                    <br />
-                    Cuando quieras ver otro mes, cambia la fecha y dale Actualizar<br />
-                    <br />
-                    Para modificar un movimiento, hazlo en el detalle de entradas y salidas y luego 
-                    pulsa Actualizar.<br />
-                    Puedes actualizar varios movimientos a la vez, siempre que no cambies de cuenta<br />
-                    Si cambias de cuenta y no le diste actualizar, no se grabarán los cambios que 
-                    hiciste.</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td class="style3">
-                    <asp:LinkButton ID="ayudaConceptoLinkButton" runat="server" 
-                        style="font-weight: 700" onclick="ayudaConceptoLinkButton_Click">Recordar Conceptos</asp:LinkButton>
-                </td>
-                <td class="style3">
-                    </td>
-            </tr>
-            <tr>
-                <td>
-<footer>
+        The money comes from elsewhere. Usually the company where you work.
+        This account called Income<br />
+        And going to the bank or pocket (Cash).<br /><br>
+        In this example we receive payment of salary in cash.
+        <br><br>
+        <img alt="sueldo" src="images/sueldo-v2-1.JPG" style="width: 100%;" />
+    </div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+    <h3>GROCERY</h3>
+    <div>
+        We will pay on cash the meat<br /><br>
+        Out "from cash" and "go to grocery".
+        <br><br>
+        <img alt="mercado" src="images/carne-v2-1.JPG" style="width: 100%;" />
+    </div>
+</div>
+</div>
+<div class="section blue">
+<div class="container fila">
+    <h2 class="col2">Why to wait, sign up now!</h2>
+    <a class="col2 button" href="index.html">Sign me up</a>
+</div>
+</div>
+<div class="section gray">
+<div class="container">
+    <h3>BUYING A TV</h3>
+    <div>
+        Let's pay by credit card<br /><br>
+        Out "from Credit Card" and "go to Extras expenses" (it is an occasional spending).
+        <br><br>
+        <img alt="tv" src="images/tv-v2-1.JPG" style="width: 100%;" />
+    </div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+    <h3>SUMMARY</h3>
+    <div>
+        We've shown the incomings and expenses apart so you can see how
+        affect accounts<br />
+        Now we will show you how looks myfinan after the 3 entries.
+        <br><br>
+        <img alt="todo3" src="images/todo3-v2-1.JPG" style="width: 100%;" />
+    </div>
+</div>
+</div>
+<div class="section gray">
+<div class="container">
+    <h3>PAYMENT OF CREDIT CARD</h3>
+    <div>
+        Usually the credit card is paid the following month, here we will
+        pay the same month to see what happens.<br />
+        We will pay with cash<br /><br>
+        Out "from cash" and "go to credit card".
+        <br><br>
+        <img alt="todo4" src="images/todo4-v2-1.JPG" style="width: 100%;" />
+    </div>
+</div>
+</div>
+<div class="section">
+<div class="container">
+    <h3>TO CONSIDER</h3>
+    <div>
+        MyFinan totals per month. The date shown defines the month and the date of the entry.<br />
+        <br />
+        When you want to see another month, change the date and click Update<br />
+        <br />
+        To modify a entry, go into the details of inputs and outputs and then click Update.<br />
+        You can update multiple entries at a time<br /><br>
+        If you select another account and not click on update, the changes you made will not be saved.
+        <br><br>
+        Look the <a href="ayudaconcepto.html">myfinan concepts</a><br><br>
+    </div>
+</div>
+</div>
+<div class="section blue">
+<div class="container fila">
+    <h2 class="col2">Why to wait, sign up now!</h2>
+    <a class="col2 button" href="index.html">Sign me up</a>
+</div>
+</div>
+<footer class="img-center-firefox">
     <div class="yes-cell">&nbsp;</div>
     <div class="footer">
         MyFinan<span title="HPHP"> </span>
@@ -332,20 +147,5 @@
     </div>
     <div class="yes-cell">&nbsp;</div>
 </footer>
-                </td>
-                <td class="style4">
-                    </td>
-            </tr>
-            <tr>
-                <td>
-                    &nbsp;</td>
-                
-                <td>
-                    &nbsp;</td>
-            </tr>
-        </table>
-    
-    </div>
-    </form>
 </body>
 </html>
