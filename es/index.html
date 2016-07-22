@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script type="text/javascript">
+       var userLang = navigator.language || navigator.userLanguage; 
+       if (userLang.indexOf("en") >= 0) {
+           window.location.assign("../index.html");
+       }
+    </script>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
