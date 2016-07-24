@@ -197,8 +197,8 @@ function dibujaCuadroCuentas()
 	else {
 		titulos.push({"titulo":"Account", "ancho":200, "alinea":"left", "campo":"nombre"});
 	    titulos.push({"titulo":"Previous balance", "ancho":160, "alinea":"right", "campo":"saldoant"});
-	    titulos.push({"titulo":"In", "ancho":100, "alinea":"right", "campo":"entradas"});
-	    titulos.push({"titulo":"Out", "ancho":100, "alinea":"right", "campo":"salidas"});
+	    titulos.push({"titulo":"Inputs", "ancho":100, "alinea":"right", "campo":"entradas"});
+	    titulos.push({"titulo":"Outputs", "ancho":100, "alinea":"right", "campo":"salidas"});
 	    titulos.push({"titulo":"Balance", "ancho":100, "alinea":"right", "campo":"saldo"});
 	}
     

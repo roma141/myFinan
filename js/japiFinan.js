@@ -21,9 +21,16 @@ function AgregaClienteF(nombre, funcion)
 	var datos = {};
 	datos.nombre = nombre;
 	datos.d1 = "myfinan@gtienda.com";
-	datos.d2 = "gtienda";	
+	datos.d2 = "gtienda";
+	var userLang = navigator.language || navigator.userLanguage; 
+       if (userLang.indexOf("es") >= 0) {
+       	lang = "es";
+       }
+       else {
+       	lang = "en";
+       }
 
-	$.post( 'http://' + servidor + '/functiond/AgregaClienteF(' + encabezado + ')?pagina=' + pagina, JSON.stringify(datos))
+	$.post( "http://" + servidor + "/functiond/AgregaClienteF(" + encabezado + ",'"+ lang +"')?pagina=" + pagina, JSON.stringify(datos))
 	 	.success(function(datos){
 	 		funcion(datos);
 	 	});
