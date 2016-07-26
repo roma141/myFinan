@@ -5,8 +5,8 @@ function leeServidor()
  	if (typeof servidor == 'undefined' || servidor=="" || servidor==null)
  		// servidor = "192.168.1.100:8084";
  		// servidor = "localhost:8084";
- 		servidor = "192.168.2.109:8084";
-		// servidor = "botpi.com:8084";
+ 		// servidor = "192.168.2.109:8084";
+		servidor = "botpi.com:8084";
 }
 // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
