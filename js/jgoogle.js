@@ -7,7 +7,7 @@ function leeServidor()
  		// servidor = "localhost:8084";
  		// servidor = "192.168.2.109:8084";
 		servidor = "botpi.com:8084";
-	window.ga.startTrackerWithId('UA-81270544-1');
+	window.ga.startTrackerWithId('UA-81270544-2');
 	window.ga.trackView(String(document.title));
 	window.ga.setAppVersion('1.0.1');
 }
