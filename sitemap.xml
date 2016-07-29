@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://myfinan.com/</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="es"
+                 href="http://myfinan.com/es/"
+                 />
+  <lastmod>2016-07-24T23:48:17+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/es/</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://myfinan.com/"
+                 />
+  <lastmod>2016-07-24T23:48:17+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/ayudafinanzas.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="es"
+                 href="http://myfinan.com/es/ayudafinanzas.html"
+                 />
+  <lastmod>2016-07-24T23:48:04+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/es/ayudafinanzas.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://myfinan.com/ayudafinanzas.html"
+                 />
+  <lastmod>2016-07-24T23:48:04+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/ayudamov.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="es"
+                 href="http://myfinan.com/es/ayudamov.html"
+                 />
+  <lastmod>2016-07-24T23:48:01+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/es/ayudamov.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://myfinan.com/ayudamov.html"
+                 />
+  <lastmod>2016-07-24T23:48:01+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/contacto.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="es"
+                 href="http://myfinan.com/es/contacto.html"
+                 />
+  <lastmod>2016-07-24T23:48:11+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/es/contacto.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://myfinan.com/contacto.html"
+                 />
+  <lastmod>2016-07-24T23:48:11+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/index.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="es"
+                 href="http://myfinan.com/es/index.html"
+                 />
+  <lastmod>2016-07-24T23:48:17+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/es/index.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://myfinan.com/index.html"
+                 />
+  <lastmod>2016-07-24T23:48:17+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/ayudaconcepto.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="es"
+                 href="http://myfinan.com/es/ayudaconcepto.html"
+                 />
+  <lastmod>2016-07-24T23:47:56+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://myfinan.com/es/ayudaconcepto.html</loc>
+  <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://myfinan.com/ayudaconcepto.html"
+                 />
+  <lastmod>2016-07-24T23:47:56+00:00</lastmod>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+</urlset>
