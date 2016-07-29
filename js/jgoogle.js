@@ -1,9 +1,9 @@
 
 function leeServidor()
 {
-	window.ga.trackView('Screen Title');
 	window.ga.startTrackerWithId('UA-81270544-2');
-	// window.ga.trackView(String(document.title));
+	// window.ga.trackView('Screen Title');
+	window.ga.trackView(String(document.title));
 	window.ga.setAppVersion('1.0.1');
  	ayuda = "http://wiki.gtienda.com";
  	if (typeof servidor == 'undefined' || servidor=="" || servidor==null)
