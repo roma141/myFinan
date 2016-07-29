@@ -16,4 +16,4 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-81270544-1', 'auto');
 ga('send', 'pageview');
 window.ga.startTrackerWithId('UA-81270544-1')
-window.ga.trackView(document.title)
+window.ga.trackView(String(document.title))
