@@ -3,8 +3,8 @@ function onLoad() {
 }
 function onDeviceReady() {
     // Now safe to use device APIs
-    windows.ga.startTrackerWithId('UA-81270544-2');
-	windows.ga.trackView('Screen Title');
+    window.ga.startTrackerWithId('UA-81270544-2');
+	window.ga.trackView('Screen Title');
 	// window.ga.trackView(String(document.title));
 	// window.ga.setAppVersion('1.0.1');
 }
