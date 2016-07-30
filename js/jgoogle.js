@@ -3,6 +3,7 @@ function onLoad() {
 }
 function onDeviceReady() {
     // Now safe to use device APIs
+    window.ga;
     window.ga.startTrackerWithId('UA-81270544-2');
     window.analytics.startTrackerWithId('UA-81270544-2');
 	// window.ga.trackView('Screen Title');
