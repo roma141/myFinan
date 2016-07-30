@@ -3,14 +3,14 @@ function onLoad() {
 }
 function onDeviceReady() {
     // Now safe to use device APIs
-    window.ga;
-    window.ga.startTrackerWithId('UA-81270544-2');
-    window.analytics.startTrackerWithId('UA-81270544-2');
+    // window.ga;
+    windows.ga.startTrackerWithId('UA-81270544-2');
+    // window.analytics.startTrackerWithId('UA-81270544-2');
 	// window.ga.trackView('Screen Title');
-	window.ga.trackView(String(document.title));
-	window.analytics.trackView(String(document.title));
-	window.ga.setAppVersion('1.0.1');
-	window.analytics.setAppVersion('1.0.1');
+	windows.ga.trackView(String(document.title));
+	// window.analytics.trackView(String(document.title));
+	windows.ga.setAppVersion('1.0.1');
+	// window.analytics.setAppVersion('1.0.1');
 }
 function leeServidor()
 {
