@@ -2,6 +2,7 @@
 function leeServidor()
 {
  	ayuda = "http://wiki.gtienda.com";
+ 	onLoad();
  	if (typeof servidor == 'undefined' || servidor=="" || servidor==null)
  		// servidor = "192.168.1.100:8084";
  		// servidor = "localhost:8084";
@@ -15,7 +16,14 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-81270544-1', 'auto');
 ga('send', 'pageview');
-windows.ga.startTrackerWithId('UA-81270544-2');
-windows.ga.trackView('Screen Title');
-// window.ga.trackView(String(document.title));
-// window.ga.setAppVersion('1.0.1');
+
+function onLoad() {
+    document.addEventListener("deviceready", onDeviceReady, false);
+}
+function onDeviceReady() {
+    // Now safe to use device APIs
+    windows.ga.startTrackerWithId('UA-81270544-2');
+	windows.ga.trackView('Screen Title');
+	// window.ga.trackView(String(document.title));
+	// window.ga.setAppVersion('1.0.1');
+}
