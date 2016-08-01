@@ -11,7 +11,6 @@ input {
     background-color: #f9f9f9;
 }
 h3 {
-    /*color: #74A0E8;*/
     color: #7496E8;
 }
 .button {
@@ -427,7 +426,7 @@ h3 {
     color: #808080;
 }
 .adding-box {
-    width: 290px;
+    width: 300px;
     margin-top: 15%;
     margin-bottom: 15%;
     margin-left: 42%;
@@ -441,7 +440,8 @@ h3 {
 }
 .date input {
     width: 80px;
-    border-style: none;
+    border-style: auto;
+    border-width: 1px;
 }
 .date2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -482,6 +482,9 @@ h3 {
     .idx-left {
         width: 60%;
     }
+    .hr-header {
+        margin: 0px;
+    }
     .no-labtop {
         display: none;
     }
@@ -490,7 +493,10 @@ h3 {
     }
     .adding-box {
         margin-top: 0;
-        margin-bottom: 0; 
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
     }
 }
 @media (max-width: 947px) {
@@ -597,6 +603,23 @@ h3 {
     .section.blue h1, .section.blue h2 {
         font-size: 17px;
     }
+    .adding-box {
+        width: auto;
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+    .adding-box td:nth-of-type(2) {
+        display: initial;
+    }
+    .no-table {
+        display: none;
+    }
+    .yes-table {
+        display: inherit;
+    }
+
+}
+@media (max-width: 500px) {
     .acount th:nth-of-type(1) {
         width: auto;
     }
@@ -615,23 +638,11 @@ h3 {
     .acount th:nth-of-type(5) {
         width: auto;
     }
-    .adding-box {
-        width: auto;
-        margin: 0 0 0 0;
-        padding: 0;
-    }
-    .adding-box td:nth-of-type(2) {
-        display: initial;
-    }
-    .no-table {
-        display: none;
-    }
-    .yes-table {
-        display: inherit;
-    }
-
 }
 @media (max-width: 435px) {
+    body {
+        font-size: 19px;
+    }
     .button {
         margin-left: 30%;
         margin-right: 30%;
@@ -652,6 +663,7 @@ h3 {
     }
     .titulo {
         height: 14px;
+        width: 340px;
     }
     .acount,
     .inOut {
@@ -689,9 +701,9 @@ h3 {
         padding: 4px 9px 0 0;
     }
     .date input {
-        font-size: 12px;
+        font-size: 13px;
         width: 70px;
-        padding: 8px 8px;
+        padding: 8px 5px;
     }
     .btn_save {
         width: 60px;
@@ -774,6 +786,9 @@ h3 {
 @media (max-width: 320px) {
     .singup-pad {
         padding: 0 11% 0 11%;
+    }
+    .titulo {
+        width: auto;
     }
     .acount,
     .inOut {
