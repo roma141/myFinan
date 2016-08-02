@@ -437,9 +437,12 @@ h3 {
     width: 120px;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 10px;
 }
 .date input {
     width: 80px;
+    padding-left: 10px;
+    padding-right: 0px;
     border-style: auto;
     border-width: 1px;
 }
